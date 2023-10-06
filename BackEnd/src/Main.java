@@ -6,6 +6,7 @@ public class Main {
 		System.out.println("Test Key");
 		System.out.println("Moved domain");
 		System.out.println("Test interaction between VScode and Eclipse");
+		System.out.println("Test interaction between VScode and Eclipse - NEW");
 	}
 
 }
