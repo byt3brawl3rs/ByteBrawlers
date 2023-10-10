@@ -1,5 +1,5 @@
 body {
-  background-color: #ebd1c1ff;
+  background-color: #f5e8e0ff;
 }
 
 header {
@@ -15,7 +15,7 @@ ul {
 li a {
   display: block;
   list-style-type: none;
-  padding: 10px 10px;
+  padding: 15px 15px;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -25,7 +25,7 @@ li a {
 
 li a:hover {
   background-color: #a47065ff;
-  padding: 10px 10px;
+  padding: 15px 15px;
 }
 
 .right {
@@ -84,15 +84,30 @@ li a:hover {
 
 .item-list {
   background-color: #f5e8e0ff;
+  margin: 0px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.item-list h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+  grid-row: 1;
+  grid-column: 1 / 6;
 }
 
 .card {
-  width: 20%;
+  justify-self: center;
+  grid-row: 2;
+  width: 80%;
+  max-height: 250px;
   background-color: #ffffff;
   border-radius: 5px;
-  margin: 10px;
   padding: 10px;
-  float: left;
+  margin-top: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -103,31 +118,55 @@ li a:hover {
   margin-bottom: 10px;
 }
 
-.card-image img {
+.card-image button {
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.card-image button img {
   width: 100%;
   border-radius: 3px;
 }
 
-.card-description {
-  font-size: 15px;
-  text-align: left;
-  margin-left: 1em;
-  margin-bottom: 10px;
-}
-
 .card-price {
-  font-size: 15px;
-  text-align: left;
-  margin-bottom: 10px;
-}
-
-.card-review {
-  font-size: 15px;
+  float: left;
+  margin: 10px 15px 0px 10px;
+  font-size: 20px;
   font-weight: bold;
-  text-align: right;
   margin-bottom: 10px;
 }
 
+.card-review img {
+  float: right;
+  width: 50%;
+  margin: 7px 3px 5px 0px;
+}
+
+#card1 {
+  grid-column: 1;
+}
+
+#card2 {
+  grid-column: 2;
+}
+
+#card3 {
+  grid-column: 3;
+}
+
+#card4 {
+  grid-column: 4;
+}
+
+#card5 {
+  grid-column: 5;
+}
+
+/*
+---------------------- ADD TO CART BUTTON ----------------------
 .card-button {
   background-color: #e38cb5ff;
   color: #000;
@@ -156,3 +195,4 @@ li a:hover {
 .card button:hover {
   background-color: #d65c93ff;
 }
+*/
