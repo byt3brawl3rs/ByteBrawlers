@@ -57,6 +57,10 @@ li a:hover {
   font-size: 15px;
 }
 
+.search input[type="text"]:focus {
+  outline: 2px solid #a47065ff;
+}
+
 .cursor {
   position: relative;
 }
