@@ -1,6 +1,10 @@
+body {
+  background-color: #ebd1c1ff;
+}
+
 header {
   font-family: "Times New Roman", Times, serif;
-  background-color: #999;
+  background-color: #dd92aaff;
   height: 50px;
 }
 
@@ -15,20 +19,20 @@ li a {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+  text-decoration: none;
   color: #000;
 }
 
 li a:hover {
-  background-color: #2198cb;
+  background-color: #d27487ff;
   padding: 10px 10px;
-  color: #fff;
 }
 
-li#right {
+.right {
   float: right;
 }
 
-li#left {
+.left {
   float: left;
 }
 
@@ -39,9 +43,116 @@ li#left {
   margin: 10px;
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid #000000;
-  background-color: #ffffff;
-  color: #fff;
+  border: 1px solid #dd92aaff;
+  background-color: #fff;
+  color: #000;
   width: 400px;
   font-size: 15px;
+}
+
+.cursor {
+  position: relative;
+}
+
+.cursor i {
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  background-color: #dd92aaff;
+  left: 5px;
+  top: 10%;
+  animation-name: blink;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.cursor input:focus + i {
+  display: none;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Displaying featured items */
+
+.item-list {
+  background-color: #f5e8e0ff;
+}
+
+.card {
+  width: 20%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  float: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-image img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.card-description {
+  font-size: 15px;
+  text-align: left;
+  margin-left: 1em;
+  margin-bottom: 10px;
+}
+
+.card-price {
+  font-size: 15px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.card-review {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.card-button {
+  background-color: #b18d81ff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.card button {
+  background-color: #b18d81ff;
+  color: #000;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 0px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  background-color: #a47065ff;
+}
+
+.card button:hover {
+  background-color: #a47065ff;
 }
