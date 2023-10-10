@@ -4,7 +4,7 @@ body {
 
 header {
   font-family: "Times New Roman", Times, serif;
-  background-color: #dd92aaff;
+  background-color: #b18d81ff;
   height: 50px;
 }
 
@@ -24,7 +24,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #d27487ff;
+  background-color: #a47065ff;
   padding: 10px 10px;
 }
 
@@ -43,7 +43,7 @@ li a:hover {
   margin: 10px;
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid #dd92aaff;
+  border: 1px solid #b18d81ff;
   background-color: #fff;
   color: #000;
   width: 400px;
@@ -58,7 +58,7 @@ li a:hover {
   position: absolute;
   width: 1px;
   height: 80%;
-  background-color: #dd92aaff;
+  background-color: #b18d81ff;
   left: 5px;
   top: 10%;
   animation-name: blink;
@@ -129,7 +129,7 @@ li a:hover {
 }
 
 .card-button {
-  background-color: #b18d81ff;
+  background-color: #e38cb5ff;
   color: #000;
   border: none;
   border-radius: 5px;
@@ -138,7 +138,7 @@ li a:hover {
 }
 
 .card button {
-  background-color: #b18d81ff;
+  background-color: #e38cb5ff;
   color: #000;
   border: none;
   width: 100%;
@@ -150,9 +150,9 @@ li a:hover {
 }
 
 .card-button:hover {
-  background-color: #a47065ff;
+  background-color: #d65c93ff;
 }
 
 .card button:hover {
-  background-color: #a47065ff;
+  background-color: #d65c93ff;
 }
