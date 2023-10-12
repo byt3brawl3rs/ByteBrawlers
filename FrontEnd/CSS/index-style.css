@@ -6,7 +6,7 @@ body {
 
 header {
   font-family: "Times New Roman", Times, serif;
-  background-color: #b18d81ff;
+  background-color: #a46f65ff;
   height: 50px;
   width: 100%;
 }
@@ -16,12 +16,12 @@ ul {
   overflow: hidden;
 }
 
-li {
+.navBar li {
   display: flex;
   align-items: center;
 }
 
-li a {
+.nav-button a {
   list-style-type: none;
   padding: 15px 15px;
   font-size: 20px;
@@ -31,8 +31,8 @@ li a {
   color: #000;
 }
 
-li a:hover {
-  background-color: #a47065ff;
+.nav-button a:hover {
+  background-color: #8d5d53ff;
   padding: 15px 15px;
 }
 
@@ -44,25 +44,50 @@ li a:hover {
   float: left;
 }
 
+.category-buttons {
+  width: 16.666%;
+  background-color: #b4877eff;
+  margin-bottom: 30px;
+  float: left;
+}
+
+.category-buttons a {
+  width: 100%;
+  padding: 5px 5px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.category-buttons a:hover {
+  background-color: #8d5d53ff;
+  padding: 5px 5px;
+}
+
 /* Search bar  for navigation bar */
 .search {
-  float: left;
-  margin-right: 50px;
-  margin-top: 10px;
+  position: absolute;
+  display: left;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  margin: auto;
+  width: 33%;
 }
 
 .search input[type="text"] {
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid #b18d81ff;
+  border: 1px solid #a46f65ff;
   background-color: #fff;
   color: #000;
-  width: 400px;
+  width: 100%;
   font-size: 15px;
 }
 
 .search input[type="text"]:focus {
-  outline: 2px solid #a47065ff;
+  outline: 2px solid #8d5d53ff;
 }
 
 /* Blinking cursor for search bar */
@@ -74,7 +99,7 @@ li a:hover {
   position: absolute;
   width: 1px;
   height: 80%;
-  background-color: #b18d81ff;
+  background-color: #a46f65ff;
   left: 5px;
   top: 10%;
   animation-name: blink;
@@ -99,11 +124,13 @@ li a:hover {
 /* Banner */
 
 .banner {
+  display: flex;
   background-color: #ebd1c1ff;
+
   height: 400px;
   max-width: 100%;
   padding: 10px 10px;
-  margin-bottom: 30px;
+  margin: 25px 50px;
 }
 
 .banner img {
@@ -229,7 +256,7 @@ li a:hover {
 
 .category button:hover {
   cursor: pointer;
-  border: 2px solid #a47065ff;
+  border: 2px solid #8d5d53ff;
 }
 
 .category img {
