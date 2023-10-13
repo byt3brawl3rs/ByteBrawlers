@@ -6,6 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="FrontEnd/CSS/normalize.css">
     <link rel="stylesheet" href="FrontEnd/CSS/index-style.css">
+    <link rel="stylesheet" href="FrontEnd/CSS/navigation-style.css">
 </head>
 
 
@@ -14,7 +15,6 @@
     <header>
         <!--
         TODO:
-            - Search bar placed in center
             - Add a drop down button to go to the same categories as in the main page
             - Display number of items in cart next to cart button
         -->
@@ -51,14 +51,18 @@
         - Have the ability to scrool though 20 items in increments of 5.
     -->
     <section class="item-list">
-        <h1>Featured Items</h1>
+        <h1>Featured Items
+        </h1>
+
         <!-- Item 1 -->
         <div class="card" id="card1">
             <div class="card-title">
                 Product 1 Title
             </div>
             <div class="card-image">
-                <button><img src="FrontEnd/Images/Ripped Jeans.jpg"></button>
+                <img src="FrontEnd/Images/Ripped Jeans.jpg">
+                <button class="card-button" id="card-button-1"></button>
+
             </div>
             <div class="card-price">
                 $0.00
@@ -73,7 +77,9 @@
                 Product 1 Title
             </div>
             <div class="card-image">
-                <button><img src="FrontEnd/Images/Ripped Jeans.jpg"></button>
+                <img src="FrontEnd/Images/Ripped Jeans.jpg">
+                <button class="card-button" id="card-button-2"></button>
+
             </div>
             <div class="card-price">
                 $0.00
@@ -88,7 +94,9 @@
                 Product 1 Title
             </div>
             <div class="card-image">
-                <button><img src="FrontEnd/Images/Ripped Jeans.jpg"></button>
+                <img src="FrontEnd/Images/Ripped Jeans.jpg">
+                <button class="card-button" id="card-button-3"></button>
+
             </div>
             <div class="card-price">
                 $0.00
@@ -103,7 +111,9 @@
                 Product 1 Title
             </div>
             <div class="card-image">
-                <button><img src="FrontEnd/Images/Ripped Jeans.jpg"></button>
+                <img src="FrontEnd/Images/Ripped Jeans.jpg">
+                <button class="card-button" id="card-button-4"></button>
+
             </div>
             <div class="card-price">
                 $0.00
@@ -118,7 +128,9 @@
                 Product 1 Title
             </div>
             <div class="card-image">
-                <button><img src="FrontEnd/Images/Ripped Jeans.jpg"></button>
+                <img src="FrontEnd/Images/Ripped Jeans.jpg">
+                <button class="card-button" id="card-button-5"></button>
+
             </div>
             <div class="card-price">
                 $0.00
@@ -129,9 +141,22 @@
         </div>
     </section>
 
+    <!-- Company Reviews -->
+    <section class="displayed-reviews">
+        <div class="review review-1">
+        </div>
+        <div class="review review-2">
+        </div>
+        <div class="review review-3">
+        </div>
+        <div class="review review-4">
+        </div>
+    </section>
+
     <!-- Categories -->
     <section class="category-container">
-        <h1>Categories</h1>
+        <h1>Categories
+        </h1>
         <div class="category category-1">
             <img src="FrontEnd/Images/MensClothing.jpg">
             <button class="category-button">Category 1</button>
@@ -158,13 +183,55 @@
         </div>
     </section>
 
-    <footer>
+    <!-- Company Information -->
 
+    <section class="company-information">
+        <div class="company-quote">
+            <p>
+                Lorem ipsum dolor sit amet. Ut rerum voluptatum et perferendis recusandae qui consequuntur laboriosam
+                qui velit harum
+                qui repellendus nemo? Sed fuga itaque aut beatae perspiciatis hic mollitia nobis et suscipit eveniet ab
+                ipsum
+                temporibus. Aut galisum nihil est consectetur eius ut sint quam.
+                Ab quaerat dolor et neque distinctio hic necessitatibus labore! Et voluptas ducimus et totam Quis est
+                accusamus corrupti
+                est consequatur molestiae hic consequatur reiciendis. Est voluptate inventore id odio dignissimos in
+                provident quibusdam
+                non beatae autem. Ut inventore placeat et dolores necessitatibus vel dolores quia eum velit voluptatem
+                et dolorem itaque
+                At corrupti eius.
+                Ad perferendis tempore et deleniti voluptas aut voluptas beatae. Ea itaque esse nam laborum inventore
+                aut delectus
+                magni. Sed quis suscipit ut autem commodi ut adipisci dolores. Et nesciunt officiis ad enim ipsum et
+                voluptatem culpa?
+            </p>
+        </div>
+        <div class="company-socials">
+            <hr>
+
+        </div>
+    </section>
+
+
+    <footer class="website-information">
+        <div class="main-footer">
+            <ul class="help-and-information">
+                <li class="title"><a href=#>Help and Information</a></li>
+                <li class="element"><a href=#>jiberish</a></li>
+            </ul>
+            <ul class="about-company">
+                <li class="title"><a href=#>About Us</a></li>
+                <li class="element"><a href=#>jiberish</a></li>
+            </ul>
+            <ul class="contact-us">
+                <li class="title"><a href=#>Contact Us</a></li>
+                <li class="element"><a href=#>jiberish</a></li>
+            </ul>
+        </div>
+        <ul class="copyright">
+            <li>d</li>
+        </ul>
     </footer>
 </body>
-
-
-
-
 
 </html>
