@@ -142,6 +142,7 @@ body {
 }
 
 .card-section {
+  padding-top: 30px;
   grid-row: 2;
   display: flex;
   grid-gap: 20px;

@@ -5,6 +5,7 @@ const featuredSlideRight = document.querySelector(".item-list button#right");
 const featuredSlideLeft = document.querySelector(".item-list button#left");
 const listItems = [...document.querySelector(".lists").children];
 
+function ItemCard({}) {}
 let currentList = 0;
 let previousList = 0;
 featuredSlideRight.addEventListener("click", () => {
