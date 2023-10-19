@@ -1,0 +1,42 @@
+/* Footer */
+footer {
+  background-color: #b4877eff;
+  height: 150px;
+  width: 100%;
+}
+
+.main-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px 100px;
+  height: 100%;
+  box-sizing: border-box;
+  grid-row: 1;
+  grid-gap: 50px;
+}
+
+.title p {
+  padding-top: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.element a {
+  font-size: 17px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #000;
+}
+
+.element a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  background-color: #a46f65ff;
+  height: 50px;
+  width: 100%;
+}

@@ -1,4 +1,3 @@
-const search = document.querySelector(".navBar .search");
 const bannerSlideRight = document.querySelector(".banner-display button#right");
 const bannerSlideLeft = document.querySelector(".banner-display button#left");
 const featuredSlideRight = document.querySelector(".item-list button#right");
