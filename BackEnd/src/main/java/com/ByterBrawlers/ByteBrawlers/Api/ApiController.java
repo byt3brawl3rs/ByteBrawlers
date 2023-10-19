@@ -3,6 +3,9 @@ package com.ByterBrawlers.ByteBrawlers.Api;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,8 +14,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import com.ByterBrawlers.ByteBrawlers.Model.Item;
+import com.ByterBrawlers.ByteBrawlers.Response.ItemResponse;
 import com.ByterBrawlers.ByteBrawlers.Service.ItemService;
 
 @RestController
@@ -22,13 +27,19 @@ public class ApiController {
 	@Autowired
 	private ItemService itemService;
 
+	@Bean
+	public RestTemplate restTemplateBean() {
+		return new RestTemplate();
+	}
+
 	public ApiController(ItemService itemService) {
 		this.itemService = itemService;
 	}
 
 	@GetMapping("{itemId}")
-	public Item getItem(@PathVariable("itemId") int itemId) {
-		return itemService.getItem(itemId);
+	public ResponseEntity<ItemResponse> getItem(@PathVariable("itemId") int itemId) {
+		ItemResponse itemResponse = itemService.getItem(itemId);
+		return ResponseEntity.status(HttpStatus.OK).body(itemResponse);
 	}
 
 	@GetMapping

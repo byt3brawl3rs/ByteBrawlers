@@ -1,21 +1,35 @@
 package com.ByterBrawlers.ByteBrawlers.Service;
 
 import java.util.List;
+import java.util.Optional;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import com.ByterBrawlers.ByteBrawlers.Model.Item;
 import com.ByterBrawlers.ByteBrawlers.Repository.ItemRepository;
+import com.ByterBrawlers.ByteBrawlers.Response.ItemResponse;
+
+import Exceptions.ItemNotFoundException;
 
 @Service
 public class ItemServiceImplement implements ItemService {
 
 	@Autowired
-	ItemRepository itemRepository;
+	private ItemRepository itemRepository;
 
-	public ItemServiceImplement(ItemRepository itemRepository) {
+	@Autowired
+	private ModelMapper mapper;
+	private final RestTemplate restTemplate;
+
+	public ItemServiceImplement(@Value("${itemservice.base.url}") String itemBaseURL, RestTemplateBuilder builder,
+			ItemRepository itemRepository) {
 		this.itemRepository = itemRepository;
+		this.restTemplate = builder.rootUri(itemBaseURL).build();
 	}
 
 	@Override
@@ -32,14 +46,19 @@ public class ItemServiceImplement implements ItemService {
 
 	@Override
 	public String deleteItem(int itemId) {
-		System.out.println(itemRepository.getReferenceById(itemId));
+		if (getItem(itemId) == null) {
+			new ItemNotFoundException(itemId);
+		}
 		itemRepository.deleteById(itemId);
 		return "Deleting item";
 	}
 
 	@Override
-	public Item getItem(int itemId) {
-		return itemRepository.findById(itemId).get();
+	public ItemResponse getItem(int itemId) {
+		Optional<Item> item = itemRepository.findById(itemId);
+		ItemResponse itemResponse = mapper.map(item, ItemResponse.class);
+
+		return itemResponse;
 	}
 
 	@Override
