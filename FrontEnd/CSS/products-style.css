@@ -5,24 +5,19 @@
   body {
     background-color: #f5e8e0ff;
   }
-
-.product-page {
-    padding: 20px;
-  }
   
-/* Style the product details section */
 .product-details {
-    margin-top: 20px; /* Add space between product details and category */
+    margin-top: 20px;
+    padding: 20px;
 }
 
-/* Style the "Back to Product List" link */
 .back-to-list {
     display: block;
     margin-top: 20px;
-    margin-bottom: 20px; /* Move the link to the bottom of the page */
+    margin-bottom: 20px;
     padding: 10px 20px;
-    background-color: #8d5d53ff; /* Background color for the button */
-    color: #fff; /* Text color */
+    background-color: #8d5d53ff;
+    color: #fff;
     text-decoration: none;
     border: none;
     border-radius: 5px;
@@ -31,41 +26,9 @@
 }
 
 .back-to-list:hover {
-    background-color: #b4877eff; /* Change background color on hover */
+    background-color: #b4877eff;
 }
-
   
-  .product-image {
-    max-width: 50%;
-  }
-  
-  .product-image img {
-    width: 100%;
-    border-radius: 5px;
-  }
-  
-  .product-info {
-    max-width: 45%;
-  }
-  
-  .product-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  .product-price {
-    font-size: 20px;
-    font-weight: bold;
-    color: #8d5d53ff;
-  }
-  
-  .product-description {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  /* Company information */
   .company-information {
     background-color: #f0ddd1ff;
     width: 100%;
