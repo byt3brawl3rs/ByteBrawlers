@@ -7,7 +7,6 @@
   }
 
 .product-page {
-    background-color: #f5e8e0ff;
     padding: 20px;
   }
   
@@ -16,7 +15,7 @@
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 10px;
+    margin: 20px;
     display: flex;
     justify-content: space-between;
   }
@@ -49,6 +48,11 @@
   .product-description {
     font-size: 16px;
     line-height: 1.5;
+  }
+
+  .product-details a {
+    display: block;
+    margin-top: 20px; /* Add some space between the product details and the link */
   }
   
   /* Company information */
