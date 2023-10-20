@@ -1,9 +1,9 @@
-package com.ByterBrawlers.ByteBrawlers.Service;
+package com.ByteBrawlers.ByteBrawlers.Service;
 
 import java.util.List;
 
-import com.ByterBrawlers.ByteBrawlers.Model.Item;
-import com.ByterBrawlers.ByteBrawlers.Response.ItemResponse;
+import com.ByteBrawlers.ByteBrawlers.Model.Item;
+import com.ByteBrawlers.ByteBrawlers.Response.ItemResponse;
 
 public interface ItemService {
 	public String createItem(Item item);

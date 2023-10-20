@@ -1,4 +1,4 @@
-package com.ByterBrawlers.ByteBrawlers.Configure;
+package com.ByteBrawlers.ByteBrawlers.Configure;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.ByterBrawlers.ByteBrawlers.ByteBrawlersApplication
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.ByteBrawlers.ByteBrawlers.ByteBrawlersApplication

@@ -1,4 +1,4 @@
-package com.ByterBrawlers.ByteBrawlers.Api;
+package com.ByteBrawlers.ByteBrawlers.Api;
 
 import java.util.List;
 
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import com.ByterBrawlers.ByteBrawlers.Model.Item;
-import com.ByterBrawlers.ByteBrawlers.Response.ItemResponse;
-import com.ByterBrawlers.ByteBrawlers.Service.ItemService;
+import com.ByteBrawlers.ByteBrawlers.Model.Item;
+import com.ByteBrawlers.ByteBrawlers.Response.ItemResponse;
+import com.ByteBrawlers.ByteBrawlers.Service.ItemService;
 
 @RestController
 @RequestMapping(value = "/items")

@@ -1,4 +1,4 @@
-package com.ByterBrawlers.ByteBrawlers.Model;
+package com.ByteBrawlers.ByteBrawlers.Model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

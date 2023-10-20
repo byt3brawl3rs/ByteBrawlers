@@ -1,4 +1,4 @@
-package com.ByterBrawlers.ByteBrawlers;
+package com.ByteBrawlers.ByteBrawlers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

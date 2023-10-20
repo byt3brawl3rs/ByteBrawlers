@@ -1,4 +1,4 @@
-package com.ByterBrawlers.ByteBrawlers.Response;
+package com.ByteBrawlers.ByteBrawlers.Response;
 
 public class ItemResponse {
 

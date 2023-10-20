@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	
-	<artifactId>backend</artifactId>
+	<artifactId>Backend</artifactId>
 	<packaging>jar</packaging>
 	
 	<parent>
@@ -36,6 +36,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.21</version>
 		</dependency>
 		<dependency> 
             <groupId>org.modelmapper</groupId> 

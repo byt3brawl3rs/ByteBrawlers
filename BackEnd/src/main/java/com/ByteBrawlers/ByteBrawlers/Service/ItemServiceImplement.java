@@ -1,18 +1,17 @@
-package com.ByterBrawlers.ByteBrawlers.Service;
+package com.ByteBrawlers.ByteBrawlers.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+import com.ByteBrawlers.ByteBrawlers.Model.Item;
+import com.ByteBrawlers.ByteBrawlers.Repository.ItemRepository;
+import com.ByteBrawlers.ByteBrawlers.Response.ItemResponse;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
-import com.ByterBrawlers.ByteBrawlers.Model.Item;
-import com.ByterBrawlers.ByteBrawlers.Repository.ItemRepository;
-import com.ByterBrawlers.ByteBrawlers.Response.ItemResponse;
 
 import Exceptions.ItemNotFoundException;
 
