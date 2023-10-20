@@ -37,8 +37,5 @@ build/
 *.ear
 
 # Eclipse #
-.settings
-.project
-.classpath
 .studio
 target

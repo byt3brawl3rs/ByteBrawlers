@@ -20,7 +20,6 @@
 
     <properties>
         <main.basedir>${project.basedir}</main.basedir>
-		<java.version>17</java.version>
 
 		<!-- Analysis Tools for CI -->
 		<build-plugin.jacoco.version>0.8.10</build-plugin.jacoco.version>
@@ -30,6 +29,14 @@
         <module>BackEnd</module>
         <!-- <module>backend</module> -->
     </modules>
+
+	<distributionManagement>
+		<repository>
+			<id>internal.repo</id>
+			<name>Internal repo</name>
+			<url>file:///home/lukas/.m2/repository</url>
+		</repository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
