@@ -10,15 +10,30 @@
     padding: 20px;
   }
   
-  .product-details {
-    background-color: #ffffff;
+/* Style the product details section */
+.product-details {
+    margin-top: 20px; /* Add space between product details and category */
+}
+
+/* Style the "Back to Product List" link */
+.back-to-list {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Move the link to the bottom of the page */
+    padding: 10px 20px;
+    background-color: #8d5d53ff; /* Background color for the button */
+    color: #fff; /* Text color */
+    text-decoration: none;
+    border: none;
     border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
+    font-size: 16px;
+    transition: background-color 0.3s ease-in;
+}
+
+.back-to-list:hover {
+    background-color: #b4877eff; /* Change background color on hover */
+}
+
   
   .product-image {
     max-width: 50%;
@@ -48,11 +63,6 @@
   .product-description {
     font-size: 16px;
     line-height: 1.5;
-  }
-
-  .product-details a {
-    display: block;
-    margin-top: 20px; /* Add some space between the product details and the link */
   }
   
   /* Company information */
