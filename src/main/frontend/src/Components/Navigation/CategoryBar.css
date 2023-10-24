@@ -1,0 +1,25 @@
+.CategoryBar {
+    display: flex;
+}
+
+.CategoryBar a {
+    display: inline-block;
+    float: left;
+
+    width: 16.666666%;
+
+    padding: 5px 5px;
+
+    background-color: #b4877eff;
+    color: #000;
+
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.CategoryBar a:hover {
+    background-color: #8d5d53ff;
+    padding: 5px 5px;
+}
