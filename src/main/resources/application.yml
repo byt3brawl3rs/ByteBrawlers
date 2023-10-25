@@ -5,10 +5,13 @@ spring:
     url: jdbc:postgresql://ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm
     username: onophtyiuzcmll
 
-
   jpa:
     generate-ddl: true
     show-sql: true
 
     hibernate:
       ddl-auto: create-drop
+
+  web:
+    resources:
+      static-locations: file:/upload

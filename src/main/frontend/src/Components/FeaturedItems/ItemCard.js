@@ -1,16 +1,16 @@
 import React, {Component} from "react";
+import './ItemCard.css';
 
-class ItemCard extends Component {
-    render() {
-        return (
-            <div className="ItemCard">
-                <p id="title">Product Title</p>
-                <img id="itemPhoto" alt="" src="./Images/Ripped%20Jeans.jpg"></img>
-                <p className="price"></p>$0.00
-                <img id="review" alt="" src="./Images/1star.jpeg"></img>
-            </div>
-        );
-    }
+function ItemCard(props) {
+    return (
+        <div className="ItemCard">
+            <p id="title">${props.title}</p>
+            <img id="itemPhoto" alt="" src="./upload/Ripped%20Jeans.jpg"></img>
+            <p className="price">$${props.price}</p>
+            <img id="review" alt="" src="./upload/1star.jpeg"></img>
+        </div>
+    );
+
 }
 
 export default ItemCard;
