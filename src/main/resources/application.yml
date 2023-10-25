@@ -5,6 +5,13 @@ spring:
     url: jdbc:postgresql://ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm
     username: onophtyiuzcmll
 
+    hikari:
+      minimumIdle: 2
+      maximumPoolSize: 10
+      idleTimeout: 120000
+      connectionTimeout: 300000
+      leakDetectionThreshold: 300000
+
   jpa:
     generate-ddl: true
     show-sql: true

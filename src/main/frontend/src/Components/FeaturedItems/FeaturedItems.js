@@ -5,9 +5,11 @@ import SwipeRight from "./SwipeRight";
 
 function FeaturedItems(props) {
     const [items, setItems] = useState([]);
+    const listItems = items.map(item => <ItemCard title={item.title} description={item.description}
+                                                  price={item.price}/>);
 
     useEffect(() => {
-        fetch("localhost:8080/items")
+        fetch("http://localhost:8080/items")
             .then(response => {
                 return response.json()
             }).then(items => {
@@ -17,7 +19,7 @@ function FeaturedItems(props) {
     return (
         <div className="FeaturedItems">
             <SwipeLeft/>
-            items.map((item) => <ItemCard title={item.title} price={item.price}/>);
+            <div>{listItems}</div>
             <SwipeRight/>
         </div>
     );
