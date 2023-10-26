@@ -26,12 +26,6 @@ public class Item {
     public Item() {
     }
 
-    public Item(String title, String description, double price, double rating) {
-        this.title = title;
-        this.description = description;
-        this.price = price;
-        this.rating = rating;
-    }
 
     public int getItemID() {
         return itemID;

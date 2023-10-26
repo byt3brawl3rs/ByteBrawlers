@@ -24,7 +24,7 @@ public class ItemServiceImplement implements ItemService {
     @Autowired
     private ModelMapper mapper;
 
-    public ItemServiceImplement(@Value("${spring.datasource.url}") String itemBaseURL, RestTemplateBuilder builder,
+    public ItemServiceImplement(@Value("http://localhost:8080/items") String itemBaseURL, RestTemplateBuilder builder,
                                 ItemRepository itemRepository) {
         this.itemRepository = itemRepository;
         this.restTemplate = builder.rootUri(itemBaseURL).build();
@@ -54,9 +54,8 @@ public class ItemServiceImplement implements ItemService {
     @Override
     public ItemResponse getItem(int itemId) {
         Optional<Item> item = itemRepository.findById(itemId);
-        ItemResponse itemResponse = mapper.map(item, ItemResponse.class);
 
-        return itemResponse;
+        return mapper.map(item, ItemResponse.class);
     }
 
     @Override

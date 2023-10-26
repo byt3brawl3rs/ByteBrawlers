@@ -25,10 +25,6 @@ public class ItemController {
         this.itemService = itemService;
     }
 
-    @Bean
-    public RestTemplate restTemplateBean() {
-        return new RestTemplate();
-    }
 
     @GetMapping("{itemId}")
     public ResponseEntity<ItemResponse> getItem(@PathVariable("itemId") int itemId) {
