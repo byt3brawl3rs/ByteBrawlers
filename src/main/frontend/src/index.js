@@ -2,14 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Header from "./Components/Navigation/Header";
-import FeaturedItems from "./Components/FeaturedItems/FeaturedItems";
+import {PageRoutes} from "./PageRoutes";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <Header/>
-        <FeaturedItems/>
+        <PageRoutes/>
     </React.StrictMode>
 );
 

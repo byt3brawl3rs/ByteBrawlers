@@ -3,19 +3,19 @@ import SearchBar from "./SearchBar";
 
 import "./NavigationBar.css";
 
-class NavigationBar extends Component {
-    render() {
-        return (
-            <div className="NavigationBar">
-                <SearchBar/>
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a style={{float: "right"}} href="">SignUp</a>
-                <a style={{float: "right"}} href="">Login</a>
-                <a style={{float: "right"}} href="">Cart</a>
-            </div>
-        );
-    }
+function NavigationBar() {
+    // const navigationBar = ;
+    return (
+        <div className="NavigationBar">
+            <SearchBar/>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a style={{float: "right"}} href="/signup">SignUp</a>
+            <a style={{float: "right"}} href="/login">Login</a>
+            <a style={{float: "right"}} href="/cart">Cart</a>
+        </div>
+    );
+
 }
 
 export default NavigationBar;
