@@ -1,7 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 import './ItemCard.css';
 
-function ItemCard(props) {
+export default function ItemCard(props) {
     return (
         <div className="ItemCard">
             <p id="title">{props.title}</p>
@@ -13,5 +13,3 @@ function ItemCard(props) {
     );
 
 }
-
-export default ItemCard;
