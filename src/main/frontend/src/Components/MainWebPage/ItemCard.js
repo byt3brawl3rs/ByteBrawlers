@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import './ItemCard.css';
+import './CSS/ItemCard.css';
 
 function ItemCard(props) {
     return (

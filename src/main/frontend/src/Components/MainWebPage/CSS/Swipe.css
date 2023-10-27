@@ -1,0 +1,17 @@
+.Swipe button {
+    background-color: #ebd1c1ff;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.Swipe button:hover {
+    background-color: #b4877eff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}

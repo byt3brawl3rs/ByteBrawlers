@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
-import SwipeLeft from "./SwipeLeft";
 import ItemCard from "./ItemCard";
-import SwipeRight from "./SwipeRight";
+import Swipe from "./Swipe";
+
 
 function FeaturedItems(props) {
     const [items, setItems] = useState([]);
@@ -18,9 +18,9 @@ function FeaturedItems(props) {
     }, []);
     return (
         <div className="FeaturedItems">
-            <SwipeLeft/>
+            <Swipe direction="&#8249;"/>
             <div>{listItems}</div>
-            <SwipeRight/>
+            <Swipe direction="&#8250;"/>
         </div>
     );
 

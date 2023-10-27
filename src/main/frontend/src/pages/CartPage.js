@@ -1,10 +1,11 @@
 import React, {Component} from "react";
+import Header from "../Components/General/Navigation/Header";
 
 class CartPage extends Component {
     render() {
         return (
             <div className="CartPage">
-                Cart Page
+                <Header/>
             </div>
         );
     }

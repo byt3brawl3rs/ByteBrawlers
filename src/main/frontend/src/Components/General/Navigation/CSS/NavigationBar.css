@@ -4,7 +4,7 @@
 
 .NavigationBar a {
     display: inline-block;
-    padding: 20px 5px;
+    padding: 20px 15px;
 
     background-color: #a46f65ff;
     color: #000;
@@ -17,5 +17,5 @@
 
 .NavigationBar a:hover {
     background-color: #8d5d53ff;
-    padding: 20px 5px;
+    padding: 20px 15px;
 }

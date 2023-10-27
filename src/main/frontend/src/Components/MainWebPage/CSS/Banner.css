@@ -1,0 +1,9 @@
+.MainBanner {
+    max-width: 90%;
+    height: 400px;
+
+    margin: 0 50px;
+    padding: 10px 10px;
+
+    background-color: #ebd1c1ff;
+}
