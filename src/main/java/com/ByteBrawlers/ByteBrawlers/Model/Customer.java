@@ -7,10 +7,6 @@ import java.util.Date;
 @Entity
 @Table
 public class Customer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int customerId;
-
     @Column
     private String firstName;
 
@@ -23,6 +19,7 @@ public class Customer {
     @Column
     private String password;
 
+    @Id
     @Column
     private String username;
 
@@ -39,14 +36,6 @@ public class Customer {
         this.email = email;
         this.password = password;
         this.username = username;
-    }
-
-    public int getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerID(int customerId) {
-        this.customerId = customerId;
     }
 
     public String getFirstName() {
@@ -98,8 +87,8 @@ public class Customer {
     //}
 
     public String toString() {
-        return String.format("Customer ID: %d\nFirst Name: %s\nLast Name: %s\nEmail: %s\n Password: %s\nUsername: %s",
-                customerId, firstName, lastName, email, password, username);
+        return String.format("First Name: %s\nLast Name: %s\nEmail: %s\n Password: %s\nUsername: %s",
+                firstName, lastName, email, password, username);
     }
 
 }
