@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import com.ByteBrawlers.ByteBrawlers.Model.Item;
 import com.ByteBrawlers.ByteBrawlers.Repository.ItemRepository;
-import com.ByteBrawlers.ByteBrawlers.Response.ItemResponse;
+import com.ByteBrawlers.ByteBrawlers.DTO.ItemDTO;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -52,10 +52,10 @@ public class ItemServiceImplement implements ItemService {
     }
 
     @Override
-    public ItemResponse getItem(int itemId) {
+    public ItemDTO getItem(int itemId) {
         Optional<Item> item = itemRepository.findById(itemId);
 
-        return mapper.map(item, ItemResponse.class);
+        return mapper.map(item, ItemDTO.class);
     }
 
     @Override

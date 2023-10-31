@@ -1,6 +1,6 @@
-package com.ByteBrawlers.ByteBrawlers.Response;
+package com.ByteBrawlers.ByteBrawlers.DTO;
 
-public class ItemResponse {
+public class ItemDTO {
 
     private int itemID;
     private String title;

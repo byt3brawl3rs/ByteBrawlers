@@ -7,6 +7,11 @@ import java.util.Date;
 @Entity
 @Table
 public class Customer {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int customerId;
+
     @Column
     private String firstName;
 
@@ -19,7 +24,6 @@ public class Customer {
     @Column
     private String password;
 
-    @Id
     @Column
     private String username;
 
@@ -36,6 +40,14 @@ public class Customer {
         this.email = email;
         this.password = password;
         this.username = username;
+    }
+
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     public String getFirstName() {

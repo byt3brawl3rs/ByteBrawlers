@@ -1,31 +1,46 @@
-import React from "react";
-
-function validateData(url = "", data = {}) {
-
-}
+import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import axios from "axios";
 
 function LoginBox() {
-    const handleSubmit = (event) => {
-        const data = Array.from(event.target.elements)
-            .filter((input) => input.name)
-            .reduce((obj, input) => Object.assign(obj, {[input.name]: input.value}), {});
-        console.log(data);
-        validateData("http://localhost:8080/customer", data).then(response => console.log(response));
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
+    const navigate = useNavigate();
+
+    async function login(event) {
+        event.preventDefault();
+        try {
+            await axios.post("http://localhost:8080/customer/login", {
+                username: username,
+                password: password
+            }).then(response => {
+                console.log(response.data)
+                if (response.data.valid) {
+                    navigate("/");
+                } else {
+                    setErrorMessage(response.data.message);
+                }
+            });
+        } catch (error) {
+            alert(error);
+        }
     }
 
-    return (
-        <div className="LoginBox">
-            <form onSubmit={handleSubmit} target="/">
-                <label htmlFor="username"><b>Username</b></label>
-                <input name="username" id="username" type="text"/>
-                <br/>
-                <label htmlFor="password"><b>Password</b></label>
-                <input name="password" id="password" type="text"/>
-                <br/>
-                <input type="submit" value="Create Account"/>
-            </form>
-        </div>
-    );
+    return (<div className="LoginBox">
+        <form>
+            <label htmlFor="username"><b>Username</b></label>
+            <input name="username" id="username" type="text" value={username}
+                   onChange={event => setUsername(event.target.value)}/>
+            <br/>
+            <label htmlFor="password"><b>Password</b></label>
+            <input name="password" id="password" type="text" value={password}
+                   onChange={event => setPassword(event.target.value)}/>
+            <br/>
+            <button type="submit" onClick={login}>Login</button>
+        </form>
+        <p>{errorMessage}</p>
+    </div>);
 }
 
 export default LoginBox;

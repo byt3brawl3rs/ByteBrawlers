@@ -3,14 +3,12 @@ package com.ByteBrawlers.ByteBrawlers.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 
 import com.ByteBrawlers.ByteBrawlers.Model.Item;
-import com.ByteBrawlers.ByteBrawlers.Response.ItemResponse;
+import com.ByteBrawlers.ByteBrawlers.DTO.ItemDTO;
 import com.ByteBrawlers.ByteBrawlers.Service.ItemService;
 
 @RestController
@@ -27,8 +25,8 @@ public class ItemController {
 
 
     @GetMapping("{itemId}")
-    public ResponseEntity<ItemResponse> getItem(@PathVariable("itemId") int itemId) {
-        ItemResponse itemResponse = itemService.getItem(itemId);
+    public ResponseEntity<ItemDTO> getItem(@PathVariable("itemId") int itemId) {
+        ItemDTO itemResponse = itemService.getItem(itemId);
         return ResponseEntity.status(HttpStatus.OK).body(itemResponse);
     }
 
