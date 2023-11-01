@@ -1,37 +1,39 @@
 package com.ByteBrawlers.ByteBrawlers.Model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
-@Entity
-@Table
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity(name = "Item")
+@Table(name = "item")
 public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int itemID;
-    @Column
+    @Column(name = "id")
+    private Integer itemID;
+    @Column(name = "title")
     private String title;
-    @Column
+    @Column(name = "description")
     private String description;
-    @Column
+    @Column(name = "price")
     private double price;
-    @Column
+    @Column(name = "rating")
     private double rating;
+
+    @OneToMany(mappedBy = "item", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ItemImage> images = new ArrayList<>();
 
     public Item() {
     }
 
 
-    public int getItemID() {
+    public Integer getItemID() {
         return itemID;
     }
 
-    public void setItemID(int itemID) {
+    public void setItemID(Integer itemID) {
         this.itemID = itemID;
     }
 
@@ -67,10 +69,33 @@ public class Item {
         this.rating = rating;
     }
 
-    @Override
-    public String toString() {
-        return String.format("Item ID: %d\nTitle: %s\nDescription: %s\n Price: %f\nRating: %f", itemID, title,
-                description, price, rating);
+    public List<ItemImage> getImages() {
+        return images;
     }
 
+    public void setImages(List<ItemImage> images) {
+        this.images = images;
+    }
+
+    public void addImage(ItemImage image) {
+        images.add(image);
+        image.setItem(this);
+    }
+
+    public void removeImage(ItemImage image) {
+        images.remove(image);
+        image.setItem(null);
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "itemID=" + itemID +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", rating=" + rating +
+                ", images=" + images +
+                '}';
+    }
 }

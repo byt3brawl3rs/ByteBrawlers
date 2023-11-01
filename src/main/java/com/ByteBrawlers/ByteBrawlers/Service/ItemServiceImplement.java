@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import com.ByteBrawlers.ByteBrawlers.Model.Item;
+import com.ByteBrawlers.ByteBrawlers.Model.ItemImage;
+import com.ByteBrawlers.ByteBrawlers.Repository.ItemImageRepository;
 import com.ByteBrawlers.ByteBrawlers.Repository.ItemRepository;
 import com.ByteBrawlers.ByteBrawlers.DTO.ItemDTO;
 import org.modelmapper.ModelMapper;
@@ -22,6 +24,8 @@ public class ItemServiceImplement implements ItemService {
     @Autowired
     private ItemRepository itemRepository;
     @Autowired
+    private ItemImageRepository itemImageRepository;
+    @Autowired
     private ModelMapper mapper;
 
     public ItemServiceImplement(@Value("http://localhost:8080/items") String itemBaseURL, RestTemplateBuilder builder,
@@ -37,13 +41,32 @@ public class ItemServiceImplement implements ItemService {
     }
 
     @Override
+    public String addItemImage(Integer itemId, ItemImage image) {
+        getItem(itemId).addImage(image);
+        itemImageRepository.save(image);
+        return "Adding image to item";
+    }
+
+    @Override
+    public String removeItemImage(Integer itemId, Integer imageId) {
+        getItem(itemId).removeImage(itemImageRepository.getReferenceById(imageId));
+        itemImageRepository.deleteById(imageId);
+        return "Removing image from item";
+    }
+
+    @Override
+    public List<ItemImage> getAllItemImages(Integer itemId) {
+        return getItem(itemId).getImages();
+    }
+
+    @Override
     public String updateItem(Item item) {
         itemRepository.save(item);
         return "Updating item";
     }
 
     @Override
-    public String deleteItem(int itemId) {
+    public String deleteItem(Integer itemId) {
         if (getItem(itemId) == null) {
             new ItemNotFoundException(itemId);
         }
@@ -52,10 +75,10 @@ public class ItemServiceImplement implements ItemService {
     }
 
     @Override
-    public ItemDTO getItem(int itemId) {
+    public Item getItem(Integer itemId) {
         Optional<Item> item = itemRepository.findById(itemId);
 
-        return mapper.map(item, ItemDTO.class);
+        return mapper.map(item, Item.class);
     }
 
     @Override

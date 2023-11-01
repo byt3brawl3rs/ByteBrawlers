@@ -2,18 +2,18 @@ package com.ByteBrawlers.ByteBrawlers.DTO;
 
 public class CustomerDTO {
 
-    private int customerId;
+    private Integer customerId;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
     private String username;
 
-    public int getCustomerId() {
+    public Integer getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(int customerId) {
+    public void setCustomerId(Integer customerId) {
         this.customerId = customerId;
     }
 

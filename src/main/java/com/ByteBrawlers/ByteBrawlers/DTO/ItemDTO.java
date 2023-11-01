@@ -2,17 +2,17 @@ package com.ByteBrawlers.ByteBrawlers.DTO;
 
 public class ItemDTO {
 
-    private int itemID;
+    private Integer itemID;
     private String title;
     private String description;
     private double price;
     private double rating;
 
-    public int getItemID() {
+    public Integer getItemID() {
         return itemID;
     }
 
-    public void setItemID(int itemID) {
+    public void setItemID(Integer itemID) {
         this.itemID = itemID;
     }
 

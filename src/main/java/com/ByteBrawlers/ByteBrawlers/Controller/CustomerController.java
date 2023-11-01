@@ -18,14 +18,14 @@ import java.util.List;
 public class CustomerController {
 
     @Autowired
-    private final CustomerService customerService;
+    private CustomerService customerService;
 
     public CustomerController(CustomerService customerService) {
         this.customerService = customerService;
     }
 
     @GetMapping("{customerId}")
-    public ResponseEntity<CustomerDTO> getCustomer(@PathVariable("customerId") int customerId) {
+    public ResponseEntity<CustomerDTO> getCustomer(@PathVariable("customerId") Integer customerId) {
         CustomerDTO customerResponse = customerService.getCustomer(customerId);
         return ResponseEntity.status(HttpStatus.OK).body(customerResponse);
     }
@@ -48,7 +48,7 @@ public class CustomerController {
     }
 
     @DeleteMapping("{customerId}")
-    public String deleteCustomer(@PathVariable("customerId") int customerId) {
+    public String deleteCustomer(@PathVariable("customerId") Integer customerId) {
         this.customerService.deleteCustomer(customerId);
         return "Deleting customer...";
     }

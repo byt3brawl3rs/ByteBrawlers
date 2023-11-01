@@ -2,6 +2,7 @@ package com.ByteBrawlers.ByteBrawlers.Controller;
 
 import java.util.List;
 
+import com.ByteBrawlers.ByteBrawlers.Model.ItemImage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,14 +26,25 @@ public class ItemController {
 
 
     @GetMapping("{itemId}")
-    public ResponseEntity<ItemDTO> getItem(@PathVariable("itemId") int itemId) {
-        ItemDTO itemResponse = itemService.getItem(itemId);
+    public ResponseEntity<Item> getItem(@PathVariable("itemId") Integer itemId) {
+        Item itemResponse = itemService.getItem(itemId);
         return ResponseEntity.status(HttpStatus.OK).body(itemResponse);
     }
 
     @GetMapping
     public List<Item> getItems() {
         return itemService.getAllItems();
+    }
+
+    @GetMapping("{itemId}/images")
+    public List<ItemImage> getItemImages(@PathVariable("itemId") Integer itemId) {
+        return itemService.getAllItemImages(itemId);
+    }
+
+    @PostMapping("{itemId}/add-image")
+    public String addImage(@PathVariable("itemId") Integer itemId, @RequestBody ItemImage image) {
+        itemService.addItemImage(itemId, image);
+        return "Adding image to item";
     }
 
     @PostMapping
@@ -48,7 +60,7 @@ public class ItemController {
     }
 
     @DeleteMapping("{itemId}")
-    public String deleteItem(@PathVariable("itemId") int itemId) {
+    public String deleteItem(@PathVariable("itemId") Integer itemId) {
         this.itemService.deleteItem(itemId);
         return "Deleting item";
     }

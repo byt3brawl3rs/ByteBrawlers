@@ -2,33 +2,34 @@ package com.ByteBrawlers.ByteBrawlers.Model;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table
+@Entity(name = "ItemImage")
+@Table(name = "item_image")
 public class ItemImage {
-    @Column
-    private int itemId;
-    @Column
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Item item;
+    @Column(name = "image_path")
     private String imagePath;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int imageId;
+    @Column(name = "id")
+    private Integer imageId;
 
-    public ItemImage(int itemId, String imagePath, int imageId) {
-        this.itemId = itemId;
+    public ItemImage(String imagePath, Integer imageId) {
         this.imagePath = imagePath;
         this.imageId = imageId;
     }
 
-    ItemImage() {
+    public ItemImage() {
 
     }
 
-    public int getItemId() {
-        return itemId;
+    public Item getItem() {
+        return item;
     }
 
-    public void setItemId(int itemId) {
-        this.itemId = itemId;
+    public void setItem(Item item) {
+        this.item = item;
     }
 
     public String getImagePath() {
@@ -39,20 +40,26 @@ public class ItemImage {
         this.imagePath = imagePath;
     }
 
-    public int getImageId() {
+    public Integer getImageId() {
         return imageId;
     }
 
-    public void setImageId(int imageId) {
+    public void setImageId(Integer imageId) {
         this.imageId = imageId;
     }
 
     @Override
     public String toString() {
         return "ItemImage{" +
-                "itemId=" + itemId +
-                ", imagePath='" + imagePath + '\'' +
+                "imagePath='" + imagePath + '\'' +
                 ", imageId=" + imageId +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ItemImage)) return false;
+        return imageId != null && imageId.equals(((ItemImage) o).getImageId());
     }
 }

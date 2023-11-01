@@ -46,7 +46,7 @@ public class CustomerServiceImplementation implements CustomerService {
     }
 
     @Override
-    public String deleteCustomer(int customerId) {
+    public String deleteCustomer(Integer customerId) {
         if (getCustomer(customerId) == null) {
             new CustomerNotFoundException();
         }
@@ -55,7 +55,7 @@ public class CustomerServiceImplementation implements CustomerService {
     }
 
     @Override
-    public CustomerDTO getCustomer(int customerId) {
+    public CustomerDTO getCustomer(Integer customerId) {
         Optional<Customer> customer = customerRepository.findById(customerId);
         return mapper.map(customer, CustomerDTO.class);
     }
