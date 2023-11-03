@@ -2,7 +2,6 @@ package com.ByteBrawlers.ByteBrawlers.Model;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity(name = "Item")
@@ -11,8 +10,7 @@ public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Integer itemID;
+    private Integer id;
     @Column(name = "title")
     private String title;
     @Column(name = "description")
@@ -22,19 +20,27 @@ public class Item {
     @Column(name = "rating")
     private double rating;
 
-    @OneToMany(mappedBy = "item", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ItemImage> images = new ArrayList<>();
+    @OneToMany
+    @JoinColumn()
+    private List<Image> images;
 
     public Item() {
     }
 
-
-    public Integer getItemID() {
-        return itemID;
+    public Item(Integer id, String title, String description, double price, double rating) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.rating = rating;
     }
 
-    public void setItemID(Integer itemID) {
-        this.itemID = itemID;
+    public Integer getItemID() {
+        return id;
+    }
+
+    public void setItemID(Integer id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -69,33 +75,14 @@ public class Item {
         this.rating = rating;
     }
 
-    public List<ItemImage> getImages() {
-        return images;
-    }
-
-    public void setImages(List<ItemImage> images) {
-        this.images = images;
-    }
-
-    public void addImage(ItemImage image) {
-        images.add(image);
-        image.setItem(this);
-    }
-
-    public void removeImage(ItemImage image) {
-        images.remove(image);
-        image.setItem(null);
-    }
-
     @Override
     public String toString() {
         return "Item{" +
-                "itemID=" + itemID +
+                "itemID=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
                 ", rating=" + rating +
-                ", images=" + images +
                 '}';
     }
 }

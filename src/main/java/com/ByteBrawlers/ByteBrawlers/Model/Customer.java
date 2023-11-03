@@ -2,15 +2,13 @@ package com.ByteBrawlers.ByteBrawlers.Model;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
-
 @Entity
 @Table
 public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer customerId;
+    private Integer id;
 
     @Column
     private String firstName;
@@ -27,10 +25,6 @@ public class Customer {
     @Column
     private String username;
 
-    //@Column
-    //@Nullable
-    //private Date dateOfBirth;
-
     public Customer() {
     }
 
@@ -43,11 +37,11 @@ public class Customer {
     }
 
     public Integer getCustomerId() {
-        return customerId;
+        return id;
     }
 
-    public void setCustomerId(Integer customerId) {
-        this.customerId = customerId;
+    public void setCustomerId(Integer id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -90,17 +84,15 @@ public class Customer {
         this.username = username;
     }
 
-    //public Date getDateOfBirth() {
-    //    return dateOfBirth;
-    //}
-
-    //public void setDateOfBirth(Date dateOfBirth) {
-    //    this.dateOfBirth = dateOfBirth;
-    //}
-
+    @Override
     public String toString() {
-        return String.format("First Name: %s\nLast Name: %s\nEmail: %s\n Password: %s\nUsername: %s",
-                firstName, lastName, email, password, username);
+        return "Customer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", username='" + username + '\'' +
+                '}';
     }
-
 }

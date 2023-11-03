@@ -2,14 +2,12 @@ package com.ByteBrawlers.ByteBrawlers.Controller;
 
 import java.util.List;
 
-import com.ByteBrawlers.ByteBrawlers.Model.ItemImage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.ByteBrawlers.ByteBrawlers.Model.Item;
-import com.ByteBrawlers.ByteBrawlers.DTO.ItemDTO;
 import com.ByteBrawlers.ByteBrawlers.Service.ItemService;
 
 @RestController
@@ -24,44 +22,29 @@ public class ItemController {
         this.itemService = itemService;
     }
 
-
-    @GetMapping("{itemId}")
-    public ResponseEntity<Item> getItem(@PathVariable("itemId") Integer itemId) {
-        Item itemResponse = itemService.getItem(itemId);
-        return ResponseEntity.status(HttpStatus.OK).body(itemResponse);
-    }
-
     @GetMapping
     public List<Item> getItems() {
         return itemService.getAllItems();
     }
 
-    @GetMapping("{itemId}/images")
-    public List<ItemImage> getItemImages(@PathVariable("itemId") Integer itemId) {
-        return itemService.getAllItemImages(itemId);
-    }
-
-    @PostMapping("{itemId}/add-image")
-    public String addImage(@PathVariable("itemId") Integer itemId, @RequestBody ItemImage image) {
-        itemService.addItemImage(itemId, image);
-        return "Adding image to item";
+    @GetMapping("{id}")
+    public ResponseEntity<Item> getItem(@PathVariable("id") Integer id) {
+        Item itemResponse = itemService.getItem(id);
+        return ResponseEntity.status(HttpStatus.OK).body(itemResponse);
     }
 
     @PostMapping
-    public String createItem(@RequestBody Item item) {
-        this.itemService.createItem(item);
-        return "Saving item";
+    public void createItem(@RequestBody Item item) {
+        itemService.createItem(item);
     }
 
     @PutMapping
-    public String updateItem(@RequestBody Item item) {
-        this.itemService.updateItem(item);
-        return "Updating item";
+    public void updateItem(@RequestBody Item item) {
+        itemService.updateItem(item);
     }
 
-    @DeleteMapping("{itemId}")
-    public String deleteItem(@PathVariable("itemId") Integer itemId) {
-        this.itemService.deleteItem(itemId);
-        return "Deleting item";
+    @DeleteMapping("{id}")
+    public void deleteItem(@PathVariable("id") Integer id) {
+        itemService.deleteItem(id);
     }
 }

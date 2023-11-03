@@ -4,7 +4,6 @@ import Exceptions.CustomerNotFoundException;
 import com.ByteBrawlers.ByteBrawlers.DTO.LoginDTO;
 import com.ByteBrawlers.ByteBrawlers.Model.Customer;
 import com.ByteBrawlers.ByteBrawlers.Repository.CustomerRepository;
-import com.ByteBrawlers.ByteBrawlers.DTO.CustomerDTO;
 import com.ByteBrawlers.ByteBrawlers.Util.LoginMessage;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,46 +17,33 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Service
-public class CustomerServiceImplementation implements CustomerService {
-
-    private final RestTemplate restTemplate;
+public class CustomerImplementation implements CustomerService {
 
     @Autowired
     private CustomerRepository customerRepository;
-    @Autowired
-    private ModelMapper mapper;
 
-    public CustomerServiceImplementation(@Value("http://localhost:8080/customer") String customerBaseURL, RestTemplateBuilder builder,
-                                         CustomerRepository customerRepository) {
+    public CustomerImplementation(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
-        this.restTemplate = builder.rootUri(customerBaseURL).build();
     }
 
     @Override
-    public String createCustomer(Customer customer) {
+    public void createCustomer(Customer customer) {
         customerRepository.save(customer);
-        return "Creating customer...";
     }
 
     @Override
-    public String updateCustomer(Customer customer) {
+    public void updateCustomer(Customer customer) {
         customerRepository.save(customer);
-        return "Updating customer... ";
     }
 
     @Override
-    public String deleteCustomer(Integer customerId) {
-        if (getCustomer(customerId) == null) {
-            new CustomerNotFoundException();
-        }
-        customerRepository.deleteById(customerId);
-        return "Deleting customer... ";
+    public void deleteCustomer(Integer id) {
+        customerRepository.deleteById(id);
     }
 
     @Override
-    public CustomerDTO getCustomer(Integer customerId) {
-        Optional<Customer> customer = customerRepository.findById(customerId);
-        return mapper.map(customer, CustomerDTO.class);
+    public Customer getCustomer(Integer id) {
+        return customerRepository.findById(id).get();
     }
 
     @Override
