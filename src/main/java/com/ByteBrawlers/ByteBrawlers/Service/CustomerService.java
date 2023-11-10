@@ -1,18 +1,22 @@
 package com.ByteBrawlers.ByteBrawlers.Service;
 
+import com.ByteBrawlers.ByteBrawlers.DTO.LoginDTO;
 import com.ByteBrawlers.ByteBrawlers.Model.Customer;
-import com.ByteBrawlers.ByteBrawlers.Response.CustomerResponse;
+import com.ByteBrawlers.ByteBrawlers.Util.LoginMessage;
 
 import java.util.List;
 
 public interface CustomerService {
-    public String createCustomer(Customer customer);
 
-    public String updateCustomer(Customer customer);
+    public LoginMessage loginCustomer(LoginDTO loginDTO);
 
-    public String deleteCustomer(int customerId);
+    public void createCustomer(Customer customer);
 
-    public CustomerResponse getCustomer(int customerId);
+    public void updateCustomer(Customer customer);
+
+    public void deleteCustomer(Integer id);
+
+    public Customer getCustomer(Integer id);
 
     public List<Customer> getAllCustomers();
 

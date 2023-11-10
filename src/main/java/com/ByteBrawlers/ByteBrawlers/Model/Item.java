@@ -1,38 +1,46 @@
 package com.ByteBrawlers.ByteBrawlers.Model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
-@Entity
-@Table
+import java.util.List;
+
+@Entity(name = "Item")
+@Table(name = "item")
 public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int itemID;
-    @Column
+    private Integer id;
+    @Column(name = "title")
     private String title;
-    @Column
+    @Column(name = "description")
     private String description;
-    @Column
+    @Column(name = "price")
     private double price;
-    @Column
+    @Column(name = "rating")
     private double rating;
+
+    @OneToMany
+    @JoinColumn()
+    private List<Image> images;
 
     public Item() {
     }
 
-
-    public int getItemID() {
-        return itemID;
+    public Item(Integer id, String title, String description, double price, double rating) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.rating = rating;
     }
 
-    public void setItemID(int itemID) {
-        this.itemID = itemID;
+    public Integer getItemID() {
+        return id;
+    }
+
+    public void setItemID(Integer id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -69,8 +77,12 @@ public class Item {
 
     @Override
     public String toString() {
-        return String.format("Item ID: %d\nTitle: %s\nDescription: %s\n Price: %f\nRating: %f", itemID, title,
-                description, price, rating);
+        return "Item{" +
+                "itemID=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", rating=" + rating +
+                '}';
     }
-
 }
