@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import ItemCard from "./ItemCard";
 import Swipe from "./Swipe";
-import '../../../public/Images/RippedJeans.jpg'
+//import '../../../public/Images/RippedJeans.jpg'
 
 function FeaturedItems(props) {
     const [cards, setCards] = useState([]);
