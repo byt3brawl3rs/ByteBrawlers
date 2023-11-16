@@ -1,5 +1,6 @@
 import React from "react";
 import Category from "./Category";
+import './CSS/MainCategories.css'
 
 function MainCategories(props) {
     return (
@@ -13,5 +14,5 @@ function MainCategories(props) {
         </div>
     );
 }
- 
+
 export default MainCategories

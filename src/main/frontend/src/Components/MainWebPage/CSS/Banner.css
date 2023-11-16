@@ -1,9 +1,22 @@
-.MainBanner {
-    max-width: 90%;
-    height: 400px;
+.Banner {
+    height: 475px;
 
-    margin: 0 50px;
-    padding: 10px 10px;
+    background-color: #f5e8e0ff;
 
+    margin-top: 5px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 50fr 1fr;
+}
+
+.Banner .Swipe {
+    top: 50%;
+    position: relative;
+}
+
+.Banner .MainBanner {
     background-color: #ebd1c1ff;
 }

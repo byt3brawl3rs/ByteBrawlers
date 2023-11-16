@@ -12,7 +12,7 @@ function SignUpBox() {
     async function signup(event) {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:8080/customer/login", {
+            await axios.post("http://localhost:8080/customer", {
                 firstName: firstName,
                 lastname: lastName,
                 email: email,

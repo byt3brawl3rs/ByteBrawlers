@@ -1,0 +1,18 @@
+.FeaturedItems {
+    background-color: #f5e8e0ff;
+    margin-bottom: 50px;
+    padding: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 50fr 1fr;
+    transition: all 200ms ease-in;
+}
+
+.FeaturedItems .Swipe {
+    top: 50%;
+    position: relative;
+}
+
+.FeaturedItems .Cards {
+    display: inline-flex;
+}
