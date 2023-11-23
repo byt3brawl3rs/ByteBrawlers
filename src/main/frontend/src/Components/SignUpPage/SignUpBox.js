@@ -1,13 +1,14 @@
 import React, {useState} from "react";
 import axios from "axios";
 
-
 function SignUpBox() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [emailService, setEmailService] = useState(false);
+    const [userIcon, setUserIcon] = useState("");
 
     async function signup(event) {
         event.preventDefault();
@@ -17,7 +18,9 @@ function SignUpBox() {
                 lastname: lastName,
                 email: email,
                 username: username,
-                password: password
+                password: password,
+                emailService: emailService,
+                userIcon: userIcon
             }).then(response => {
                 console.log(response.data)
             });
@@ -25,7 +28,6 @@ function SignUpBox() {
             alert(error);
         }
     }
-
 
     return (
         <div className="SignUpBox">
@@ -50,6 +52,25 @@ function SignUpBox() {
                 <input name="password" id="password" type="text" value={password}
                        onChange={event => setPassword(event.target.value)}/>
                 <br/>
+
+                <div className="form-check">
+                    <input className="form-check-input" type="checkbox" id="emailService"
+                           checked={emailService} onChange={() => setEmailService(!emailService)}/>
+                    <label className="form-check-label" htmlFor="emailService">
+                        Subscribe to Email Service
+                    </label>
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="userIcon"><b>Select User Icon</b></label>
+                    <select className="form-control" id="userIcon" value={userIcon}
+                            onChange={event => setUserIcon(event.target.value)}>
+                        <option value="">Choose...</option>
+                        <option value="icon1">Icon 1</option>
+                        <option value="icon2">Icon 2</option>
+                    </select>
+                </div>
+
                 <button type="submit" onClick={signup}>Create Account</button>
             </form>
         </div>
