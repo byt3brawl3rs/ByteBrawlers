@@ -10,11 +10,11 @@ export const PageRoutes = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/i" element={<MainWebPage/>}/>
+                <Route path="/" element={<MainWebPage/>}/>
                 <Route path="/login" element={<LoginPage/>}/>
                 <Route path="/signup" element={<SignUpPage/>}/>
                 <Route path="/cart" element={<CartPage/>}/>
-                <Route path="/" element={<Search/>}/>
+                <Route path="/random" element={<Search/>}/>
             </Routes>
         </BrowserRouter>
     );

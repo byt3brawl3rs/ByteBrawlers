@@ -1,0 +1,121 @@
+.SignUpBox {
+    border: 2px solid #ddd;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.SignUpBox form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.SignUpBox label {
+    font-family: Arial, sans-serif;
+    margin: 3px 0;
+    width: 100%;
+    text-align: left;
+}
+
+.SignUpBox input[type="text"],
+.SignUpBox input[type="email"],
+.SignUpBox input[type="password"],
+.SignUpBox select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 90%;
+}
+
+.SignUpBox button {
+    padding: 10px;
+    background-color: #CD5C5C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    width: 90%;
+}
+
+.SignUpBox button:hover {
+    background-color: #DB7093;
+}
+
+.SignUpBox .form-check {
+    display: flex;
+    width: 90%;
+    font-family: Arial, sans-serif;
+
+}
+
+.SignUpBox .form-check-input {
+    margin-right: 10px;
+}
+
+.SignUpBox .form-check-label {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+}
+
+.SignUpBox .form-group {
+    margin: 10px 0;
+    width: 90%;
+}
+
+.SignUpBox .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+.SignUpBox label {
+    width: 90%;
+    display: block;
+    text-align: left;
+}
+
+.icon-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+.icon-selection .icon-button-left{
+    margin-right: 10px;
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.icon.selected {
+    border: 2px solid blue;
+}
