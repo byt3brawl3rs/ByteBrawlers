@@ -1,4 +1,4 @@
-.SignUpBox {
+.MainBox {
     border: 2px solid #ddd;
     padding: 20px;
     width: 80%;
@@ -21,24 +21,24 @@
 }
 
 
-.SignUpBox form {
+.MainBox form {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.SignUpBox label {
+.MainBox label {
     font-family: Arial, sans-serif;
     margin: 3px 0;
     width: 100%;
     text-align: left;
 }
 
-.SignUpBox input[type="text"],
-.SignUpBox input[type="email"],
-.SignUpBox input[type="password"],
-.SignUpBox select {
+.MainBox input[type="text"],
+.MainBox input[type="email"],
+.MainBox input[type="password"],
+.MainBox select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -46,7 +46,7 @@
     width: 90%;
 }
 
-.SignUpBox button {
+.MainBox button {
     padding: 10px;
     background-color: #CD5C5C;
     color: white;
@@ -57,32 +57,32 @@
     width: 90%;
 }
 
-.SignUpBox button:hover {
+.MainBox button:hover {
     background-color: #DB7093;
 }
 
-.SignUpBox .form-check {
+.MainBox .form-check {
     display: flex;
     width: 90%;
     font-family: Arial, sans-serif;
 
 }
 
-.SignUpBox .form-check-input {
+.MainBox .form-check-input {
     margin-right: 10px;
 }
 
-.SignUpBox .form-check-label {
+.MainBox .form-check-label {
     font-family: Arial, sans-serif;
     margin: 10px;
 }
 
-.SignUpBox .form-group {
+.MainBox .form-group {
     margin: 10px 0;
     width: 90%;
 }
 
-.SignUpBox .form-control {
+.MainBox .form-control {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -90,7 +90,7 @@
 }
 
 
-.SignUpBox label {
+.MainBox label {
     width: 90%;
     display: block;
     text-align: left;

@@ -36,7 +36,7 @@ function SignUpBox() {
     }
 
     return (
-        <div className="SignUpBox">
+        <div className="MainBox">
             <div className="container">
                 <form>
                     <label htmlFor="firstName"><b>First Name</b></label>
