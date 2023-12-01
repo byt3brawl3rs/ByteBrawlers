@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
-import '/Users/mona/Documents/cse201/project/ByteBrawlers/src/main/frontend/src/Components/MainWebPage/CSS/SignUpBox.css';
+import './CSS/SignUpBox.css';
 
 function LoginBox() {
     const [username, setUsername] = useState("");

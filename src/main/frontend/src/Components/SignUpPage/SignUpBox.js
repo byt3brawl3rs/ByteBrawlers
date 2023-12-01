@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
-import '/Users/mona/Documents/cse201/project/ByteBrawlers/src/main/frontend/src/Components/MainWebPage/CSS/SignUpBox.css';
+import '../LoginPage/CSS/SignUpBox.css';
 
 function SignUpBox() {
     const [firstName, setFirstName] = useState("");
