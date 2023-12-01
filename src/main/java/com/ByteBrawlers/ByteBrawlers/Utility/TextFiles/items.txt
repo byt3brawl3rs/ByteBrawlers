@@ -1,0 +1,500 @@
+0
+orange shoes
+People will turn their heads when you walk by
+56.99
+1
+1
+orange hat
+You will be the envy of all your friends
+47.99
+5
+2
+purple gloves
+This can be worn with anything!
+39.99
+1
+3
+red hat
+This can be worn with anything!
+55.99
+4
+4
+red pants
+This can be worn with anything!
+48.99
+4
+5
+red socks
+You will be the envy of all your friends
+13.99
+4
+6
+green socks
+You will be the envy of all your friends
+39.99
+1
+7
+yellow scarf
+Great quality for a great price
+17.99
+4
+8
+blue gloves
+You will be the envy of all your friends
+1.99
+5
+9
+pink socks
+Great for when you want to impress your date
+36.99
+3
+10
+purple shoes
+Great for when you want to impress your date
+12.99
+5
+11
+orange shoes
+This can be worn with anything!
+53.99
+4
+12
+orange pants
+Perfect for a night out on the town
+35.99
+1
+13
+red shoes
+Perfect for a night out on the town
+65.99
+4
+14
+purple gloves
+You will be the talk of the town
+21.99
+1
+15
+purple shoes
+This can be worn with anything!
+44.99
+2
+16
+blue hat
+You will be the envy of all your friends
+69.99
+3
+17
+green shoes
+Great for when you want to impress your date
+1.99
+5
+18
+red scarf
+You will be the envy of all your friends
+23.99
+5
+19
+purple hat
+People will turn their heads when you walk by
+2.99
+3
+20
+pink shirt
+People will turn their heads when you walk by
+68.99
+5
+21
+pink socks
+Perfect for a night out on the town
+52.99
+5
+22
+red socks
+You will be the envy of all your friends
+29.99
+2
+23
+purple hat
+This can be worn with anything!
+65.99
+5
+24
+purple socks
+You will be the envy of all your friends
+66.99
+2
+25
+red scarf
+Perfect for a night out on the town
+27.99
+4
+26
+green socks
+Great for when you want to impress your date
+54.99
+3
+27
+orange gloves
+You will be the talk of the town
+41.99
+3
+28
+red socks
+This can be worn with anything!
+9.99
+4
+29
+green shirt
+Great quality for a great price
+1.99
+1
+30
+purple pants
+Great for when you want to impress your date
+53.99
+3
+31
+red hat
+You will be the talk of the town
+5.99
+1
+32
+orange shoes
+You will be the envy of all your friends
+11.99
+2
+33
+yellow pants
+You will be the envy of all your friends
+57.99
+4
+34
+green shoes
+You will be the envy of all your friends
+39.99
+1
+35
+green shirt
+People will turn their heads when you walk by
+7.99
+3
+36
+red gloves
+People will turn their heads when you walk by
+48.99
+4
+37
+yellow hat
+Perfect for a night out on the town
+21.99
+1
+38
+pink socks
+People will turn their heads when you walk by
+3.99
+3
+39
+yellow pants
+You will be the talk of the town
+18.99
+5
+40
+pink shoes
+Great for when you want to impress your date
+29.99
+2
+41
+pink shoes
+You will be the envy of all your friends
+9.99
+4
+42
+purple pants
+Great quality for a great price
+7.99
+2
+43
+orange hat
+Great quality for a great price
+12.99
+4
+44
+red shirt
+People will turn their heads when you walk by
+63.99
+2
+45
+blue scarf
+Great for when you want to impress your date
+3.99
+4
+46
+blue socks
+Great for when you want to impress your date
+1.99
+2
+47
+blue hat
+Great for when you want to impress your date
+49.99
+3
+48
+pink shirt
+You will be the envy of all your friends
+11.99
+3
+49
+yellow shirt
+You will be the envy of all your friends
+66.99
+2
+50
+purple socks
+Perfect for a night out on the town
+1.99
+5
+51
+blue scarf
+People will turn their heads when you walk by
+25.99
+5
+52
+blue pants
+People will turn their heads when you walk by
+38.99
+5
+53
+pink gloves
+Great for when you want to impress your date
+25.99
+4
+54
+blue socks
+Great for when you want to impress your date
+22.99
+1
+55
+yellow socks
+You will be the talk of the town
+51.99
+4
+56
+green hat
+Great for when you want to impress your date
+28.99
+2
+57
+purple hat
+You will be the envy of all your friends
+61.99
+3
+58
+blue shirt
+People will turn their heads when you walk by
+22.99
+5
+59
+orange scarf
+People will turn their heads when you walk by
+21.99
+3
+60
+red socks
+This can be worn with anything!
+6.99
+2
+61
+purple hat
+Great quality for a great price
+9.99
+1
+62
+purple socks
+This can be worn with anything!
+51.99
+4
+63
+yellow pants
+Great for when you want to impress your date
+21.99
+4
+64
+orange pants
+Great quality for a great price
+14.99
+1
+65
+red socks
+You will be the talk of the town
+61.99
+5
+66
+pink shirt
+You will be the talk of the town
+6.99
+5
+67
+green gloves
+You will be the envy of all your friends
+57.99
+5
+68
+orange scarf
+People will turn their heads when you walk by
+64.99
+3
+69
+orange socks
+You will be the talk of the town
+25.99
+5
+70
+orange hat
+Great quality for a great price
+66.99
+5
+71
+red hat
+Great quality for a great price
+18.99
+1
+72
+purple socks
+Great for when you want to impress your date
+13.99
+3
+73
+yellow scarf
+You will be the talk of the town
+46.99
+4
+74
+yellow scarf
+Perfect for a night out on the town
+2.99
+2
+75
+yellow hat
+This can be worn with anything!
+27.99
+1
+76
+pink socks
+Great quality for a great price
+44.99
+3
+77
+orange hat
+Perfect for a night out on the town
+69.99
+1
+78
+yellow scarf
+Great quality for a great price
+38.99
+4
+79
+green scarf
+You will be the talk of the town
+25.99
+4
+80
+purple hat
+This can be worn with anything!
+36.99
+1
+81
+red scarf
+You will be the talk of the town
+32.99
+1
+82
+yellow shirt
+Perfect for a night out on the town
+15.99
+3
+83
+purple scarf
+Great for when you want to impress your date
+8.99
+3
+84
+orange scarf
+This can be worn with anything!
+43.99
+2
+85
+pink shirt
+You will be the talk of the town
+38.99
+5
+86
+red pants
+Perfect for a night out on the town
+5.99
+3
+87
+red scarf
+You will be the envy of all your friends
+65.99
+2
+88
+green socks
+Perfect for a night out on the town
+44.99
+3
+89
+blue hat
+People will turn their heads when you walk by
+24.99
+3
+90
+pink shoes
+Great for when you want to impress your date
+57.99
+5
+91
+blue shirt
+You will be the envy of all your friends
+6.99
+1
+92
+pink socks
+Great for when you want to impress your date
+45.99
+5
+93
+purple pants
+This can be worn with anything!
+7.99
+3
+94
+purple socks
+This can be worn with anything!
+35.99
+5
+95
+pink hat
+People will turn their heads when you walk by
+42.99
+4
+96
+green shirt
+Perfect for a night out on the town
+67.99
+2
+97
+yellow pants
+People will turn their heads when you walk by
+16.99
+1
+98
+blue shirt
+You will be the envy of all your friends
+48.99
+2
+99
+blue hat
+Perfect for a night out on the town
+32.99
+5

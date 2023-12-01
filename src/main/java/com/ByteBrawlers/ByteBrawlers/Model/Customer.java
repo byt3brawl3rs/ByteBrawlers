@@ -12,16 +12,12 @@ public class Customer {
 
     @Column
     private String firstName;
-
     @Column
     private String lastName;
-
     @Column
     private String email;
-
     @Column
     private String password;
-
     @Column
     private String username;
 
@@ -34,6 +30,14 @@ public class Customer {
         this.email = email;
         this.password = password;
         this.username = username;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Integer getCustomerId() {

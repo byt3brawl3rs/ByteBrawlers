@@ -2,6 +2,7 @@ package com.ByteBrawlers.ByteBrawlers.Controller;
 
 import java.util.List;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,11 @@ public class ItemController {
 
     public ItemController(ItemService itemService) {
         this.itemService = itemService;
+    }
+
+    @PostConstruct
+    private void init() {
+
     }
 
     @GetMapping
@@ -46,5 +52,10 @@ public class ItemController {
     @DeleteMapping("{id}")
     public void deleteItem(@PathVariable("id") Integer id) {
         itemService.deleteItem(id);
+    }
+
+    @GetMapping("/colors/{colorId}")
+    public List<Item> getItemsByColorId(@PathVariable("colorId") Integer colorId) {
+        return itemService.getItemsByColorId(colorId);
     }
 }

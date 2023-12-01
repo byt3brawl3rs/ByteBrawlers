@@ -1,4 +1,4 @@
-package Exceptions;
+package com.ByteBrawlers.ByteBrawlers.Utility.Exceptions;
 
 import java.io.Serial;
 

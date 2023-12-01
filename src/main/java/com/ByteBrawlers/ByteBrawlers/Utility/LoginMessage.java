@@ -1,4 +1,4 @@
-package com.ByteBrawlers.ByteBrawlers.Util;
+package com.ByteBrawlers.ByteBrawlers.Utility;
 
 public class LoginMessage {
     private String message;

@@ -1,4 +1,4 @@
-package com.ByteBrawlers.ByteBrawlers.DTO;
+package com.ByteBrawlers.ByteBrawlers.Utility.DTO;
 
 public class LoginDTO {
     private String username;

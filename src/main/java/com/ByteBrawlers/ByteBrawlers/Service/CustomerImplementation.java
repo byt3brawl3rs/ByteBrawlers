@@ -1,16 +1,11 @@
 package com.ByteBrawlers.ByteBrawlers.Service;
 
-import Exceptions.CustomerNotFoundException;
-import com.ByteBrawlers.ByteBrawlers.DTO.LoginDTO;
+import com.ByteBrawlers.ByteBrawlers.Utility.DTO.LoginDTO;
 import com.ByteBrawlers.ByteBrawlers.Model.Customer;
 import com.ByteBrawlers.ByteBrawlers.Repository.CustomerRepository;
-import com.ByteBrawlers.ByteBrawlers.Util.LoginMessage;
-import org.modelmapper.ModelMapper;
+import com.ByteBrawlers.ByteBrawlers.Utility.LoginMessage;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Objects;

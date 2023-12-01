@@ -16,4 +16,6 @@ public interface ItemService {
     public void updateItem(Item item);
 
     public void deleteItem(Integer id);
+
+    public List<Item> getItemsByColorId(Integer colorId);
 }
