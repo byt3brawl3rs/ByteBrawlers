@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
 import ItemCard from "./ItemCard";
 import Swipe from "./Swipe";
-import './CSS/FeaturedItems.css'
+import '../../../public/Images/RippedJeans.jpg'
 
 function FeaturedItems(props) {
     const [cards, setCards] = useState([]);
 
-    /* useEffect(() => {
+    useEffect(() => {
         Promise.any(
             fetch("http://localhost:8080/items")
                 .then(items => items.json())
@@ -22,18 +22,12 @@ function FeaturedItems(props) {
                     })
                 })
         ).then(r => console.log(r))
-    }, []); */
+    }, []);
 
     return (
         <div className="FeaturedItems">
             <Swipe direction="&#8249;"/>
-            <div className="Cards">
-                <ItemCard/>
-                <ItemCard/>
-                <ItemCard/>
-                <ItemCard/>
-                <ItemCard/>
-            </div>
+            <div>{cards}</div>
             <Swipe direction="&#8250;"/>
         </div>
     );
