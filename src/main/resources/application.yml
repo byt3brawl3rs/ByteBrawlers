@@ -17,7 +17,7 @@ spring:
     show-sql: true
 
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
 
   web:
     resources:

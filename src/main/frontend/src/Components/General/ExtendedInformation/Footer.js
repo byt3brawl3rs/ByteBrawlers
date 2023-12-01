@@ -2,6 +2,7 @@ import React from "react";
 import Quote from "./Quote";
 import References from "./References";
 import Copyright from "./Copyright";
+import './CSS/Footer.css'
 
 
 function Footer(props) {

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
+import './CSS/SignUpBox.css';
 
 function LoginBox() {
     const [username, setUsername] = useState("");
@@ -27,20 +28,25 @@ function LoginBox() {
         }
     }
 
-    return (<div className="LoginBox">
-        <form>
-            <label htmlFor="username"><b>Username</b></label>
-            <input name="username" id="username" type="text" value={username}
-                   onChange={event => setUsername(event.target.value)}/>
-            <br/>
-            <label htmlFor="password"><b>Password</b></label>
-            <input name="password" id="password" type="text" value={password}
-                   onChange={event => setPassword(event.target.value)}/>
-            <br/>
-            <button type="submit" onClick={login}>Login</button>
-        </form>
-        <p>{errorMessage}</p>
-    </div>);
+    return (
+        <div className="LoginBox">
+            <div className="MainBox">
+                <div className="container">
+                    <form>
+                        <label htmlFor="username"><b>Username</b></label>
+                        <input name="username" id="username" type="text" value={username}
+                               onChange={event => setUsername(event.target.value)}/>
+                        <br/>
+                        <label htmlFor="password"><b>Password</b></label>
+                        <input name="password" id="password" type="text" value={password}
+                               onChange={event => setPassword(event.target.value)}/>
+                        <br/>
+                        <button type="submit" onClick={login}>Login</button>
+                    </form>
+                    <p>{errorMessage}</p>
+                </div>
+            </div>
+        </div>);
 }
 
 export default LoginBox;

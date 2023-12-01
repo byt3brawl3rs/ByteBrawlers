@@ -1,4 +1,5 @@
 import React from "react";
+import './CSS/Quote.css'
 
 function Quote(props) {
     return (

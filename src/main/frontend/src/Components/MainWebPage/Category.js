@@ -1,12 +1,13 @@
 import React from "react";
+import './CSS/Category.css'
 
-function Catagories(props) {
+function Category(props) {
     return (
-        <div className="Catagories">
+        <div className="Category">
             <p>{props.category}</p>
             <img src={props.image} alt={props.alt}/>
         </div>
     );
 }
 
-export default Catagories
+export default Category;

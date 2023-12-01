@@ -5,6 +5,8 @@ import Banner from "../Components/MainWebPage/Banner";
 import MainCategories from "../Components/MainWebPage/MainCategories";
 import Footer from "../Components/General/ExtendedInformation/Footer";
 
+import './CSS/Normalize.css'
+
 
 class MainWebPage extends Component {
     render() {

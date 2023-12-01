@@ -1,8 +1,8 @@
 package com.ByteBrawlers.ByteBrawlers.Service;
 
-import com.ByteBrawlers.ByteBrawlers.DTO.LoginDTO;
+import com.ByteBrawlers.ByteBrawlers.Utility.DTO.LoginDTO;
 import com.ByteBrawlers.ByteBrawlers.Model.Customer;
-import com.ByteBrawlers.ByteBrawlers.Util.LoginMessage;
+import com.ByteBrawlers.ByteBrawlers.Utility.LoginMessage;
 
 import java.util.List;
 

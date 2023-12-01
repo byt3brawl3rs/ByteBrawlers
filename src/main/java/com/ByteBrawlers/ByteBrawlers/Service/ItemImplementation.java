@@ -1,16 +1,11 @@
 package com.ByteBrawlers.ByteBrawlers.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import com.ByteBrawlers.ByteBrawlers.Model.Item;
-import com.ByteBrawlers.ByteBrawlers.Model.Image;
 import com.ByteBrawlers.ByteBrawlers.Repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import Exceptions.ItemNotFoundException;
 
 @Service
 public class ItemImplementation implements ItemService {
@@ -45,5 +40,20 @@ public class ItemImplementation implements ItemService {
     @Override
     public void deleteItem(Integer id) {
         itemRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Item> getItemsByColorId(Integer colorId) {
+        return itemRepository.findAllByColorId(colorId);
+    }
+
+    @Override
+    public List<Item> gotItemsBySizeID(Integer sizeId) {
+        return itemRepository.findAllBySizeId(sizeId);
+    }
+
+    @Override
+    public List<Item> getAllEvenIdItems() {
+        return itemRepository.findAllByEvenItemId();
     }
 }

@@ -7,7 +7,7 @@ function ItemCard(props) {
     return (
         <div className="ItemCard">
             <p id="title">{props.title}</p>
-            <img id="itemPhoto" alt="" src='../../../public/Images/RippedJeans.jpg'/>
+            <img id="itemPhoto" alt="" src=""/>
             <p className="description">{props.description}</p>
             <p className="price">${props.price}</p>
             <img id="review" alt="" src=""/>

@@ -1,0 +1,14 @@
+0
+shirt
+1
+pants
+2
+shoes
+3
+socks
+4
+hat
+5
+gloves
+6
+scarf
