@@ -18,4 +18,8 @@ public interface ItemService {
     public void deleteItem(Integer id);
 
     public List<Item> getItemsByColorId(Integer colorId);
+
+    public List<Item> gotItemsBySizeID(Integer sizeId);
+
+    public List<Item> getAllEvenIdItems();
 }

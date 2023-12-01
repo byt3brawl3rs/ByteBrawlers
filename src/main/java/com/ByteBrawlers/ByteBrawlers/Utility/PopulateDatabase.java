@@ -58,8 +58,6 @@ public class PopulateDatabase {
                 Integer id = inFile.nextInt();
                 inFile.nextLine();
                 String color = inFile.nextLine();
-                System.out.println(id);
-                System.out.println(color);
                 colors.add(new Color(id, color));
             }
             colorRepository.saveAllAndFlush(colors);

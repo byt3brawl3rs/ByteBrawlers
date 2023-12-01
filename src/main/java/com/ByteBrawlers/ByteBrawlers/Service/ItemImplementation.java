@@ -46,4 +46,14 @@ public class ItemImplementation implements ItemService {
     public List<Item> getItemsByColorId(Integer colorId) {
         return itemRepository.findAllByColorId(colorId);
     }
+
+    @Override
+    public List<Item> gotItemsBySizeID(Integer sizeId) {
+        return itemRepository.findAllBySizeId(sizeId);
+    }
+
+    @Override
+    public List<Item> getAllEvenIdItems() {
+        return itemRepository.findAllByEvenItemId();
+    }
 }

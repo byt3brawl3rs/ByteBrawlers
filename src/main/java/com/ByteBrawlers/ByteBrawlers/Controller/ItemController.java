@@ -58,4 +58,14 @@ public class ItemController {
     public List<Item> getItemsByColorId(@PathVariable("colorId") Integer colorId) {
         return itemService.getItemsByColorId(colorId);
     }
+
+    @GetMapping("/sizes/{sizeId}")
+    public List<Item> getItemsBySizeId(@PathVariable("sizeId") Integer sizeId) {
+        return itemService.gotItemsBySizeID(sizeId);
+    }
+
+    @GetMapping("/even")
+    public List<Item> getAllEvenIdItems() {
+        return itemService.getAllEvenIdItems();
+    }
 }

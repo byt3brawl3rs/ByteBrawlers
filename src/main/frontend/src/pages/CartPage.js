@@ -1,10 +1,10 @@
 // CartPage.js
-import React, { Component } from 'react';
-import {Link } from "react-router-dom";
+import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 import Header from '../Components/General/Navigation/Header';
 import CartItem from '../Components/Cart/CartItem';
 import CheckoutButton from '../Components/Cart/CheckoutButton';
-import '../FrontEnd/CSS/cart-style.css'; // Import the cart styles
+import '../Components/Cart/CSS/cart-style.css'; // Import the cart styles
 
 class CartPage extends Component {
     state = {
@@ -47,22 +47,22 @@ class CartPage extends Component {
 
     handleDeleteItem = (itemId) => {
         const updatedCart = this.state.cartItems.filter((item) => item.id !== itemId);
-        this.setState({ cartItems: updatedCart });
+        this.setState({cartItems: updatedCart});
     };
 
     handleChangeItem = (itemId, property, value) => {
         const updatedCart = this.state.cartItems.map((item) =>
-            item.id === itemId ? { ...item, [property]: value } : item
+            item.id === itemId ? {...item, [property]: value} : item
         );
-        this.setState({ cartItems: updatedCart });
+        this.setState({cartItems: updatedCart});
     };
 
     render() {
-        const { cartItems } = this.state;
+        const {cartItems} = this.state;
 
         return (
             <div className="CartPage">
-                <Header />
+                <Header/>
                 <div className="cart-container">
                     <h2>Your Shopping Cart</h2>
                     {cartItems.length === 0 ? (
@@ -85,7 +85,7 @@ class CartPage extends Component {
                                         Back to Shopping
                                     </button>
                                 </Link>
-                                <CheckoutButton total={this.calculateTotal()} />
+                                <CheckoutButton total={this.calculateTotal()}/>
                             </div>
                         </div>
                     )}
