@@ -1,21 +1,24 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import Header from "../Components/General/Navigation/Header";
-import FeaturedItems from "../Components/MainWebPage/FeaturedItems";
-import Banner from "../Components/MainWebPage/Banner";
-import MainCategories from "../Components/MainWebPage/MainCategories";
 import Footer from "../Components/General/ExtendedInformation/Footer";
 import "../Components/MainWebPage/CSS/ItemPage.css";
 
 class ItemPage extends Component {
-    render() {
-      const { title, description, price, itemPhoto, review} = this.props;
-  
-      return (
+  render() {
+    //const { title, description, price, itemPhoto, review} = this.props;
+    const title = "Item Title";
+    const description = "Item Description";
+    const price = "Item Price";
+    const itemPhoto = "";
+    const review = "";
+
+    return (
+      <div>
+        <Header />
         <div className="ItemPage">
-          <Header />
           <div className="item-details">
             <div className="item-photo">
-              <img src={require(itemPhoto)} alt={title} />
+              <img src="" alt={title} />
             </div>
             <div className="item-actions">
               <h1>{title}</h1>
@@ -32,7 +35,7 @@ class ItemPage extends Component {
                 </select>
               </div>
               <button className="button">Add to Cart</button>
-              <img id="review" alt="Review" src={require(review)} />
+              <img id="review" alt="Review" src="" />
               <p>${price}</p>
             </div>
             <div className="item-description">
@@ -40,11 +43,11 @@ class ItemPage extends Component {
               <p>{description}</p>
             </div>
           </div>
-          <Footer />
         </div>
-      );
-    }
+        <Footer />
+      </div>
+    );
   }
-  
-  export default ItemPage;
-  
+}
+
+export default ItemPage;
