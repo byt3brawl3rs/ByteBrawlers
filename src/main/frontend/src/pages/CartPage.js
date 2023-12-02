@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import Header from '../Components/General/Navigation/Header';
 import CartItem from '../Components/Cart/CartItem';
 import CheckoutButton from '../Components/Cart/CheckoutButton';
-import '../Components/Cart/CSS/cart-style.css'; // Import the cart styles
+import '../Components/Cart/CSS/Cart.css'; // Import the cart styles
 
 class CartPage extends Component {
     state = {

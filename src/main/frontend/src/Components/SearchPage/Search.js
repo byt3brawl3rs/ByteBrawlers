@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Header from '../General/Navigation/Header';
-import './CSS/search-style.css';
+import './CSS/Search.css';
 import ItemCard from '../MainWebPage/CSS/ItemCard.css';
 
 class SearchTest extends Component {
