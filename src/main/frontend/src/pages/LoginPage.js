@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Header from "../Components/General/Navigation/Header";
+import Footer from "../Components/General/ExtendedInformation/Footer";
 import LoginBox from "../Components/LoginPage/LoginBox";
 
 class LoginPage extends Component {
@@ -8,6 +9,7 @@ class LoginPage extends Component {
             <div className="LoginPage">
                 <Header/>
                 <LoginBox/>
+                <Footer/>
             </div>
         );
     }

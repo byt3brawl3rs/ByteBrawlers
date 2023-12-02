@@ -1,32 +1,36 @@
 import React, {useEffect, useState} from "react";
 import ItemCard from "./ItemCard";
-import Swipe from "./Swipe";
+import Swipe from "./Swipe"
+import "./CSS/FeaturedItems.css"
 
 function FeaturedItems(props) {
     const [cards, setCards] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [visibleSection, setVisibleSection] = useState(0);
 
-    // useEffect(() => {
-    //     Promise.any(
-    //         fetch("http://localhost:8080/items")
-    //             .then(items => items.json())
-    //             .then(items => {
-    //                 items.map(item => {
-    //                     let url = "http://localhost:8080/items/" + item.itemID + "/images";
-    //                     fetch(url).then(images => images.json())
-    //                         .then(images => setCards([...cards,
-    //                             <ItemCard key={item.itemID} title={item.title}
-    //                                       description={item.description}
-    //                                       price={item.price} rating={item.rating}/>])
-    //                         )
-    //                 })
-    //             })
-    //     ).then(r => console.log(r))
-    // }, []);
+    useEffect(() => {
+        setLoading(true);
+
+        fetch("http://localhost:8080/items/featuredItems")
+            .then(response => response.json())
+            .then(data => {
+                setCards(data);
+                setLoading(false)
+            })
+    }, []);
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
 
     return (
         <div className="FeaturedItems">
             <Swipe direction="&#8249;"/>
-            <div>{cards}</div>
+            <div className="Cards">{cards.map(card => <ItemCard key={card.id} title={card.title}
+                                                                description={card.description}
+                                                                price={card.price} imagePath="RippedJeans.jpg"/>
+            )
+            }</div>
             <Swipe direction="&#8250;"/>
         </div>
     );

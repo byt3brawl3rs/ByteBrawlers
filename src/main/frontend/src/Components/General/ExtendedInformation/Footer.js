@@ -1,5 +1,5 @@
 import React from "react";
-import Quote from "./Quote";
+import Quote from "../../MainWebPage/Quote";
 import References from "./References";
 import Copyright from "./Copyright";
 import './CSS/Footer.css'
@@ -8,7 +8,6 @@ import './CSS/Footer.css'
 function Footer(props) {
     return (
         <div className="Footer">
-            <Quote/>
             <References/>
             <Copyright/>
         </div>

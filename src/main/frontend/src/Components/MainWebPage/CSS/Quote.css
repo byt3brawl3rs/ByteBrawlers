@@ -1,0 +1,13 @@
+.Quote {
+    background-color: #f0ddd1ff;
+    font-size: 20px;
+    line-height: 2.0;
+    text-align: center;
+    width: 100%;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.Quote p {
+    margin: 0 250px;
+}

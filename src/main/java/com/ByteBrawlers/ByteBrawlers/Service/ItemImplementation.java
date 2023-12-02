@@ -56,4 +56,11 @@ public class ItemImplementation implements ItemService {
     public List<Item> getAllEvenIdItems() {
         return itemRepository.findAllByEvenItemId();
     }
+
+    @Override
+    public List<Item> getFiveRandomItems() {
+        return itemRepository.findFiveRandomItems();
+    }
+
+
 }

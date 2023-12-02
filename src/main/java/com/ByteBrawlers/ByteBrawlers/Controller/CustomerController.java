@@ -49,7 +49,7 @@ public class CustomerController {
         this.customerService.deleteCustomer(id);
     }
 
-    @PostMapping(value = "/login")
+    @GetMapping(value = "/login")
     public ResponseEntity<?> customerLogin(@RequestBody LoginDTO loginDTO) {
         LoginMessage loginResponse = customerService.loginCustomer(loginDTO);
         return ResponseEntity.ok(loginResponse);

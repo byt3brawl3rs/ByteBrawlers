@@ -3,11 +3,10 @@ import './CSS/ItemCard.css';
 
 // {require(props.rating)}
 function ItemCard(props) {
-    let image = require(props.image);
     return (
         <div className="ItemCard">
             <p id="title">{props.title}</p>
-            <img id="itemPhoto" alt="" src=""/>
+            <img id="itemPhoto" alt="" src={require("./Images/" + props.imagePath)}/>
             <p className="description">{props.description}</p>
             <p className="price">${props.price}</p>
             <img id="review" alt="" src=""/>

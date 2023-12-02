@@ -68,4 +68,9 @@ public class ItemController {
     public List<Item> getAllEvenIdItems() {
         return itemService.getAllEvenIdItems();
     }
+
+    @GetMapping("/featuredItems")
+    public List<Item> getFiveRandomItems() {
+        return itemService.getFiveRandomItems();
+    }
 }

@@ -1,5 +1,6 @@
 .FeaturedItems {
     background-color: #f5e8e0ff;
+    /*background-color: #DB7093;*/
     margin-bottom: 50px;
     padding: 20px;
     display: grid;
@@ -14,5 +15,6 @@
 }
 
 .FeaturedItems .Cards {
+    
     display: inline-flex;
 }

@@ -22,4 +22,6 @@ public interface ItemService {
     public List<Item> gotItemsBySizeID(Integer sizeId);
 
     public List<Item> getAllEvenIdItems();
+
+    public List<Item> getFiveRandomItems();
 }
