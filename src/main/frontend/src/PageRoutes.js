@@ -4,7 +4,6 @@ import MainWebPage from "./pages/MainWebPage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import CartPage from "./pages/CartPage";
-import SearchPage from "./pages/SearchPage";
 
 export const PageRoutes = () => {
     return (

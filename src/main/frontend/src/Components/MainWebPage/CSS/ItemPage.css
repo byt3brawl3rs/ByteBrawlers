@@ -1,0 +1,49 @@
+.ItemPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.item-photo {
+  flex: 1;
+}
+
+.item-photo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.item-actions {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.quantity-selector,
+.size-selector {
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#review {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px; /* Adjust the margin based on your design */
+}
+
+.item-description {
+  margin-top: 20px;
+}
