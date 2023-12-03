@@ -53,7 +53,6 @@ const CheckoutPage = () => {
         <h1>Checkout</h1>
   
         <div className="checkout-columns">
-          {/* Address Column */}
           <form onSubmit={handleSubmit} className="checkout-column">
             <h2>Address Information</h2>
             <label>
@@ -98,7 +97,6 @@ const CheckoutPage = () => {
             </label>
           </form>
   
-          {/* Payment Column */}
           <form onSubmit={handleSubmit} className="checkout-column">
             <h2>Payment Information</h2>
             <label>
@@ -153,7 +151,6 @@ const CheckoutPage = () => {
             </label>
           </form>
   
-          {/* Shipping Column */}
           <form onSubmit={handleSubmit} className="checkout-column">
             <h2>Shipping Method</h2>
             <label>
@@ -164,7 +161,6 @@ const CheckoutPage = () => {
               >
                 <option value="Standard">Standard</option>
                 <option value="Express">Express</option>
-                {/* Add more shipping options as needed */}
               </select>
             </label>
             <div className="order-summary">
@@ -178,7 +174,6 @@ const CheckoutPage = () => {
           </form>
         </div>
   
-        {/* Link back to CartPage */}
         <Link to="/CartPage">Back to Cart</Link>
       </div>
     );
