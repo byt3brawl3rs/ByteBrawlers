@@ -12,6 +12,7 @@
 
 .item-photo {
   flex: 1;
+  max-width: 45%; /* Adjust as needed */
 }
 
 .item-photo img {
@@ -22,6 +23,18 @@
 .item-actions {
   flex: 1;
   margin-left: 20px;
+}
+
+.big-font {
+  font-size: 24px; /* Adjust as needed */
+}
+
+.price {
+  font-size: 18px; /* Adjust as needed */
+}
+
+.review {
+  font-size: 16px; /* Adjust as needed */
 }
 
 .quantity-selector,
@@ -41,7 +54,7 @@
 #review {
   max-width: 100%;
   height: auto;
-  margin-top: 10px; /* Adjust the margin based on your design */
+  margin-top: 10px;
 }
 
 .item-description {
