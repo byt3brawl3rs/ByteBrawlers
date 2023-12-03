@@ -13,7 +13,14 @@ const ItemPage = () => {
   const review = "Filler Review";
 
   const toCart = () => {
-    navigate("./CartPage");
+    navigate("./CartPage", {
+      state: {
+        itemName: title,
+        itemPrice: price,
+        itemQuantity: document.querySelector(".quantity-selector input").value,
+        itemSize: document.querySelector(".size-selector select").value,
+      },
+    });
   };
 
     return (
