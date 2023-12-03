@@ -2,14 +2,23 @@ package com.ByteBrawlers.ByteBrawlers.Controller;
 
 import java.util.List;
 
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.ByteBrawlers.ByteBrawlers.Model.Item;
 import com.ByteBrawlers.ByteBrawlers.Service.ItemService;
+
+import jakarta.annotation.PostConstruct;
 
 @RestController
 @RequestMapping(value = "/items")
@@ -69,6 +78,15 @@ public class ItemController {
         return itemService.getAllEvenIdItems();
     }
 
+    @GetMapping("/formfactor/{formFactorId}")
+    public List<Item> getItemsByFormFactorId(@PathVariable("formFactorId") Integer formFactorId){
+        return itemService.getItemsByFormFactorId(formFactorId);
+    }
+
+    @GetMapping("/pricelower20")
+    public List<Item> getItemsWherePriceLower20(){
+        return itemService.getAllItemsWherePriceLower20();
+    }
     @GetMapping("/featuredItems")
     public List<Item> getFiveRandomItems() {
         return itemService.getFiveRandomItems();
