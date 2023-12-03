@@ -3,7 +3,6 @@ package com.ByteBrawlers.ByteBrawlers.Service;
 import java.util.List;
 
 import com.ByteBrawlers.ByteBrawlers.Model.Item;
-import com.ByteBrawlers.ByteBrawlers.Model.Image;
 
 public interface ItemService {
 
@@ -19,7 +18,11 @@ public interface ItemService {
 
     public List<Item> getItemsByColorId(Integer colorId);
 
+    public List<Item> getItemsByFormFactorId(Integer formFactorId);
+
     public List<Item> gotItemsBySizeID(Integer sizeId);
 
     public List<Item> getAllEvenIdItems();
+
+    public List<Item> getAllItemsWherePriceLower20();
 }

@@ -2,10 +2,11 @@ package com.ByteBrawlers.ByteBrawlers.Service;
 
 import java.util.List;
 
-import com.ByteBrawlers.ByteBrawlers.Model.Item;
-import com.ByteBrawlers.ByteBrawlers.Repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.ByteBrawlers.ByteBrawlers.Model.Item;
+import com.ByteBrawlers.ByteBrawlers.Repository.ItemRepository;
 
 @Service
 public class ItemImplementation implements ItemService {
@@ -56,4 +57,16 @@ public class ItemImplementation implements ItemService {
     public List<Item> getAllEvenIdItems() {
         return itemRepository.findAllByEvenItemId();
     }
+
+    @Override
+    public List<Item> getItemsByFormFactorId(Integer formFactorId) {
+        return itemRepository.findAllByFormFactorId(formFactorId);
+    }
+
+    @Override
+    public List<Item> getAllItemsWherePriceLower20() {
+        return itemRepository.findAllByPriceLower20();
+    }
+
+    
 }
