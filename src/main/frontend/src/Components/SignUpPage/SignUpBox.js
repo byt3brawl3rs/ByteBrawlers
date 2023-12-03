@@ -37,7 +37,7 @@ function SignUpBox() {
     return (
         <div className="MainBox">
             <div className="container">
-                <p className="errorMessage" style={{display: displayValue}}>Username Taken.</p>
+                <div className="errorMessage" style={{display: displayValue}}>Username Taken.</div>
                 <form>
                     <label htmlFor="firstName"><b>First Name</b></label>
                     <input name="firstName" id="firstName" type="text" value={firstName}
