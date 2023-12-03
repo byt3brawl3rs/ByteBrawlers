@@ -3,7 +3,7 @@ import Header from '../General/Navigation/Header';
 import './CSS/Search.css';
 import ItemCard from '../MainWebPage/CSS/ItemCard.css';
 
-class SearchTest extends Component {
+class Search extends Component {
     state = {
         searchQuery: '',
         items: [],

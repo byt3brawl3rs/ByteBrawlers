@@ -1,7 +1,6 @@
-.SearchPage {
+/*.SearchPage {
     font-family: Arial, sans-serif;
     color: #333;
-    padding: 20px;
 }
 
 .search-container {
@@ -45,7 +44,7 @@
     width: 80%;
 }
 
-/*.ItemCard {
+.ItemCard {
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 4px;
@@ -61,8 +60,8 @@
 .ItemCard p {
     margin: 5px 0;
 }
-*/
+
 .price {
     color: #E44D26;
     font-weight: bold;
-}
+}*/

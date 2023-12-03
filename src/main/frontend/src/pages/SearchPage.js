@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
-import Search from "../Components/SearchPage/Search";
+
+import Header from "../Components/General/Navigation/Header";
+import Footer from "../Components/General/ExtendedInformation/Footer";
+import SearchTest from "../Components/SearchPage/SearchTest";
 
 class SearchPage extends Component {
     render() {
-        return (<Search/>);
+        return (<div>
+            <Header/>
+            <SearchTest/>
+            <Footer/>
+        </div>);
     }
 }
 

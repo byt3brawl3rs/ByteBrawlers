@@ -4,6 +4,8 @@ import MainWebPage from "./pages/MainWebPage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import CartPage from "./pages/CartPage";
+import SearchPage from "./pages/SearchPage";
+import ItemPage from "./pages/ItemPage";
 
 export const PageRoutes = () => {
     return (
@@ -14,6 +16,7 @@ export const PageRoutes = () => {
                 <Route path="/signup" element={<SignUpPage/>}/>
                 <Route path="/cart" element={<CartPage/>}/>
                 <Route path="/search" element={<SearchPage/>}/>
+                <Route path="/item" element={<ItemPage/>}/>
             </Routes>
         </BrowserRouter>
     );
