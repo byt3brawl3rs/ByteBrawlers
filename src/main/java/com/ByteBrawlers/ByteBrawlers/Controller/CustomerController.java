@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/customer")
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class CustomerController {
 
     @Autowired
@@ -49,10 +49,17 @@ public class CustomerController {
         this.customerService.deleteCustomer(id);
     }
 
-    @GetMapping(value = "/login")
+    @PostMapping("/login")
     public ResponseEntity<?> customerLogin(@RequestBody LoginDTO loginDTO) {
         LoginMessage loginResponse = customerService.loginCustomer(loginDTO);
         return ResponseEntity.ok(loginResponse);
+    }
+
+    @PostMapping("/login/{username}")
+    public ResponseEntity<Customer> getCustomerByUsername(@PathVariable("username") String username) {
+        System.out.println(username);
+        Customer customerResponse = customerService.getCustomerByUsername(username);
+        return ResponseEntity.status(HttpStatus.OK).body(customerResponse);
     }
 }
 

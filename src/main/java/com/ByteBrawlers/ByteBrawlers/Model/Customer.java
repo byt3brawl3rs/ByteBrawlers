@@ -99,4 +99,8 @@ public class Customer {
                 ", username='" + username + '\'' +
                 '}';
     }
+
+    public boolean isPresent() {
+        return true;
+    }
 }

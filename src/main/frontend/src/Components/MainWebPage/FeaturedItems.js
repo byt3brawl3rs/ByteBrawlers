@@ -26,7 +26,7 @@ function FeaturedItems(props) {
     return (
         <div className="FeaturedItems">
             <Swipe direction="&#8249;"/>
-            <div className="Cards">{cards.map(card => <ItemCard key={card.id} title={card.title}
+            <div className="Cards">{cards.map(card => <ItemCard key={card.id} id={card.id} title={card.title}
                                                                 description={card.description}
                                                                 price={card.price} imagePath="RippedJeans.jpg"/>
             )

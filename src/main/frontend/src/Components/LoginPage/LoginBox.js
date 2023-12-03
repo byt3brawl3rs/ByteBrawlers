@@ -4,6 +4,7 @@ import axios from "axios";
 import './CSS/SignUpBox.css';
 
 function LoginBox() {
+    const [customerId, setCustomerId] = useState(0);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
@@ -12,11 +13,29 @@ function LoginBox() {
     const login = (event) => {
         const loginCredentials = {username, password};
         event.preventDefault()
-        fetch("http://localhost:8080/customer/login", {
+        const results = fetch("http://localhost:8080/customer/login", {
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(loginCredentials)
-        })
+        }).then(response => response.json())
+            .then((data) => {
+                console.log(data)
+                if (data.valid) {
+                    return fetch(`http://localhost:8080/customer/login/${username}`, {
+                        method: "POST",
+                        headers: {"content-type": "application/json"},
+                        body: JSON.stringify(username)
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data.id);
+                            setCustomerId(data.id);
+                            navigate("/");
+                        })
+                } else {
+                    setErrorMessage(data.message);
+                }
+            })
     }
 
     return (

@@ -47,15 +47,20 @@ public class CustomerImplementation implements CustomerService {
     }
 
     @Override
+    public Customer getCustomerByUsername(String username) {
+        return customerRepository.findCustomerByUsername(username);
+    }
+
+    @Override
     public LoginMessage loginCustomer(LoginDTO loginDTO) {
-        Customer employee1 = customerRepository.findByUsername(loginDTO.getUsername());
+        Customer employee1 = customerRepository.findCustomerByUsername(loginDTO.getUsername());
         if (employee1 != null) {
             String password = loginDTO.getPassword();
             String encodedPassword = employee1.getPassword();
             Boolean isPwdRight = (Objects.equals(password, encodedPassword));
             if (isPwdRight) {
-                Optional<Customer> employee = customerRepository.findOneByUsernameAndPassword(loginDTO.getUsername(), encodedPassword);
-                if (employee.isPresent()) {
+                Customer customer = customerRepository.findCustomerByUsernameAndPassword(loginDTO.getUsername(), encodedPassword);
+                if (customer.isPresent()) {
                     return new LoginMessage("Login successful", true);
                 }
             }

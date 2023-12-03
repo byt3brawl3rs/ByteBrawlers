@@ -20,10 +20,11 @@ function SearchResults() {
     if (loading) {
         return <p>Loading...</p>;
     }
-
+    console.log(items)
     return (<div className="SearchResults">
+
         {items.map(item =>
-            <ItemCard key={item.id} title={item.title}
+            <ItemCard id={item.id} title={item.title}
                       description={item.description}
                       price={item.price} imagePath="RippedJeans.jpg"/>
         )

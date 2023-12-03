@@ -20,4 +20,6 @@ public interface CustomerService {
 
     public List<Customer> getAllCustomers();
 
+    public Customer getCustomerByUsername(String username);
+
 }
