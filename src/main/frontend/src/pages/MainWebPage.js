@@ -4,8 +4,7 @@ import FeaturedItems from "../Components/MainWebPage/FeaturedItems";
 import Banner from "../Components/MainWebPage/Banner";
 import MainCategories from "../Components/MainWebPage/MainCategories";
 import Footer from "../Components/General/ExtendedInformation/Footer";
-
-import './CSS/Normalize.css'
+import Quote from "../Components/MainWebPage/Quote";
 
 
 class MainWebPage extends Component {
@@ -16,6 +15,7 @@ class MainWebPage extends Component {
                 <Banner/>
                 <FeaturedItems/>
                 <MainCategories/>
+                <Quote/>
                 <Footer/>
             </div>
         );

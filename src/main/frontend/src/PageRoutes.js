@@ -4,7 +4,8 @@ import MainWebPage from "./pages/MainWebPage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import CartPage from "./pages/CartPage";
-import Search from "./pages/Search";
+import SearchPage from "./pages/SearchPage";
+import ItemPage from "./pages/ItemPage";
 
 export const PageRoutes = () => {
     return (
@@ -14,7 +15,8 @@ export const PageRoutes = () => {
                 <Route path="/login" element={<LoginPage/>}/>
                 <Route path="/signup" element={<SignUpPage/>}/>
                 <Route path="/cart" element={<CartPage/>}/>
-                <Route path="/random" element={<Search/>}/>
+                <Route path="/search" element={<SearchPage/>}/>
+                <Route path="/item" element={<ItemPage/>}/>
             </Routes>
         </BrowserRouter>
     );

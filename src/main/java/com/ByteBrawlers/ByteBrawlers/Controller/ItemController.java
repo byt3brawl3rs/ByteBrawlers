@@ -87,4 +87,8 @@ public class ItemController {
     public List<Item> getItemsWherePriceLower20(){
         return itemService.getAllItemsWherePriceLower20();
     }
+    @GetMapping("/featuredItems")
+    public List<Item> getFiveRandomItems() {
+        return itemService.getFiveRandomItems();
+    }
 }

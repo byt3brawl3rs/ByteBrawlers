@@ -3,7 +3,7 @@ package com.ByteBrawlers.ByteBrawlers.Model;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"username"}))
 public class Customer {
 
     @Id

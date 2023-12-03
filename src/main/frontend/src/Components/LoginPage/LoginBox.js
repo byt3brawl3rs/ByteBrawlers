@@ -9,23 +9,14 @@ function LoginBox() {
     const [errorMessage, setErrorMessage] = useState("");
     const navigate = useNavigate();
 
-    async function login(event) {
-        event.preventDefault();
-        try {
-            await axios.post("http://localhost:8080/customer/login", {
-                username: username,
-                password: password
-            }).then(response => {
-                console.log(response.data)
-                if (response.data.valid) {
-                    navigate("/");
-                } else {
-                    setErrorMessage(response.data.message);
-                }
-            });
-        } catch (error) {
-            alert(error);
-        }
+    const login = (event) => {
+        const loginCredentials = {username, password};
+        event.preventDefault()
+        fetch("http://localhost:8080/customer/login", {
+            method: "POST",
+            headers: {"content-type": "application/json"},
+            body: JSON.stringify(loginCredentials)
+        })
     }
 
     return (
