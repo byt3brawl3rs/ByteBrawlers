@@ -5,12 +5,11 @@ import "../Components/MainWebPage/CSS/ItemPage.css";
 
 class ItemPage extends Component {
   render() {
-    //const { title, description, price, itemPhoto, review} = this.props;
     const title = "Item Title";
     const description = "Item Description";
     const price = "Item Price";
-    const itemPhoto = "";
-    const review = "";
+    const itemPhoto = "Filler Photo";
+    const review = "Filler Review";
 
     return (
       <div>
@@ -18,29 +17,28 @@ class ItemPage extends Component {
         <div className="ItemPage">
           <div className="item-details">
             <div className="item-photo">
-              <img src="" alt={title} />
+              <img src="https://www.mrporter.com/variants/images/3633577411310824/in/w960_q60.jpg" alt={itemPhoto} />
             </div>
             <div className="item-actions">
               <h1>{title}</h1>
+              <p className="big-font">{description}</p>
+              <p className="price">{price}</p>
+              <p className="review">{review}</p>
               <div className="quantity-selector">
-                <label>Quantity:</label>
+                <label>Quantity </label><br></br>
                 <input type="number" min="1" defaultValue="1" />
               </div>
               <div className="size-selector">
-                <label>Size:</label>
+                <label>Size</label><br></br>
                 <select>
                   <option value="s">Small</option>
                   <option value="m">Medium</option>
                   <option value="l">Large</option>
+                  <option value="xl">X-Large</option>
+                  <option value="2xl">XX-Large</option>
                 </select>
               </div>
               <button className="button">Add to Cart</button>
-              <img id="review" alt="Review" src="" />
-              <p>${price}</p>
-            </div>
-            <div className="item-description">
-              <h2>Description:</h2>
-              <p>{description}</p>
             </div>
           </div>
         </div>
@@ -51,3 +49,4 @@ class ItemPage extends Component {
 }
 
 export default ItemPage;
+
