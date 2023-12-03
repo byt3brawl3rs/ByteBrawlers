@@ -2,14 +2,19 @@ import React, { Component } from "react";
 import Header from "../Components/General/Navigation/Header";
 import Footer from "../Components/General/ExtendedInformation/Footer";
 import "../Components/MainWebPage/CSS/ItemPage.css";
+import {useNavigate} from "react-router-dom";
 
-class ItemPage extends Component {
-  render() {
-    const title = "Item Title";
-    const description = "Item Description";
-    const price = "Item Price";
-    const itemPhoto = "Filler Photo";
-    const review = "Filler Review";
+const ItemPage = () => {
+  const navigate = useNavigate();
+  const title = "Item Title";
+  const description = "Item Description";
+  const price = "Item Price";
+  const itemPhoto = "Filler Photo";
+  const review = "Filler Review";
+
+  const toCart = () => {
+    navigate("./CartPage");
+  };
 
     return (
       <div>
@@ -38,7 +43,7 @@ class ItemPage extends Component {
                   <option value="2xl">XX-Large</option>
                 </select>
               </div>
-              <button className="button">Add to Cart</button>
+              <button type="submit" className="button" onClick={toCart}>Add to Cart</button>
             </div>
           </div>
         </div>
@@ -46,7 +51,6 @@ class ItemPage extends Component {
       </div>
     );
   }
-}
 
 export default ItemPage;
 
