@@ -1,19 +1,32 @@
 package com.ByteBrawlers.ByteBrawlers.Controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ByteBrawlers.ByteBrawlers.Model.Reviews;
+import com.ByteBrawlers.ByteBrawlers.Service.ReviewService;
+
+import jakarta.annotation.PostConstruct;
 
 @RestController
 @CrossOrigin
 public class ReviewController {
 
-    @Autowired
-    private Reviews review;
-
     public ReviewController(Reviews review) {
-        this.review = review;
+    }
+
+    @PostConstruct
+    private void init() {
+
+    }
+
+    @GetMapping
+    public List<String> getReviews() {
+        return ReviewService.getAllReviews();
+    }
+    public ReviewController(ReviewService review) {
     }
 }

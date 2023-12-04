@@ -21,15 +21,19 @@ public class Customer {
     @Column
     private String username;
 
+    @OneToOne
+    private Cart cart;
+
     public Customer() {
     }
 
-    public Customer(String firstName, String lastName, String email, String password, String username) {
+    public Customer(String firstName, String lastName, String email, String password, String username, Cart cart) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.username = username;
+        this.cart = cart;
     }
 
     public Integer getId() {

@@ -13,13 +13,16 @@ public class CartDetails {
     @OneToMany
     private List<Item> items;
 
+    @Column
+    private Integer quantity;
+
     public CartDetails() {
 
     }
 
-    public CartDetails(Integer id, List<Item> items) {
+    public CartDetails(Integer id, Integer quantity) {
         this.id = id;
-        this.items = items;
+        this.quantity = quantity;
     }
 
     public Integer getId() {
@@ -30,11 +33,20 @@ public class CartDetails {
         this.id = id;
     }
 
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
     @Override
     public String toString() {
         return "CartDetails{" +
                 "id=" + id +
                 ", items=" + items +
+                ", quantity=" + quantity +
                 '}';
     }
 }

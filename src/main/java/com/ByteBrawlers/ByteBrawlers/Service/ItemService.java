@@ -25,5 +25,10 @@ public interface ItemService {
     public List<Item> getAllEvenIdItems();
 
     public List<Item> getAllItemsWherePriceLower20();
+
     public List<Item> getFiveRandomItems();
+
+    public List<Item> getAllBySearchParameter(String searchParam);
+
+    public List<Item> getAllByDescription(String description);
 }

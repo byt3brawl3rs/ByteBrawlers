@@ -13,28 +13,22 @@ function ItemPage() {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-            setLoading(true);
-            console.log(id)
-            fetch(`http://localhost:8080/items/${id}`)
-                .then(response => response.json()
-                ).then(data => {
-                setItem(data)
-                setLoading(false);
-            })
-                .catch(err => err.message)
-        }
+        setLoading(true);
 
-        , [])
+        fetch(`http://localhost:8080/items/${id}`)
+            .then(response => response.json()
+            ).then(data => {
+            setItem(data)
+            setLoading(false);
+        })
+            .catch(err => err.message)
+    }, [])
 
-    const toCart = () => {
-        navigate("/cart", {
-            state: {
-                itemName: item.title,
-                itemPrice: item.price,
-                itemQuantity: document.querySelector(".quantity-selector input").value,
-                itemSize: document.querySelector(".size-selector select").value,
-            },
-        });
+    const addToCart = () => {
+        let items = localStorage.getItem("cart") || [];
+        items.push(item)
+        localStorage.setItem("cart", JSON.stringify(items))
+        navigate("/");
     };
 
     if (loading) {
@@ -69,7 +63,7 @@ function ItemPage() {
                                 <option value="2xl">XX-Large</option>
                             </select>
                         </div>
-                        <button type="submit" className="button" onClick={toCart}>Add to Cart</button>
+                        <button type="submit" className="button" onClick={addToCart}>Add to Cart</button>
                     </div>
                 </div>
             </div>

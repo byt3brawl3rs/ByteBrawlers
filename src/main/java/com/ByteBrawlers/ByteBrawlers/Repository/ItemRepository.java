@@ -31,10 +31,9 @@ public interface ItemRepository extends JpaRepository<Item, Integer> {
     @Query("SELECT i FROM Item i WHERE i.price < 20")
     List<Item> findAllByPriceLower20();
 
-
     @Query("SELECT i FROM Item i ORDER BY i.id DESC LIMIT 5")
     List<Item> findFiveRandomItems();
 
-    @Query("SELECT i FROM Item i WHERE i.title LIKE \"%?1%\"")
+    @Query("SELECT i FROM Item i WHERE i.title LIKE \"%?1%\" OR WHERE i.description LIKE \"%?1%\"")
     List<Item> findAllBySearchParameter(String searchParam);
 }

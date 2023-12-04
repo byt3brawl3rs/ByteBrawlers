@@ -1,6 +1,6 @@
 // CartPage.js
 import React, {Component} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import Header from '../Components/General/Navigation/Header';
 import CartItem from '../Components/Cart/CartItem';
 import CheckoutButton from '../Components/Cart/CheckoutButton';
