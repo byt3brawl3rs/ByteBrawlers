@@ -2,24 +2,23 @@ package com.ByteBrawlers.ByteBrawlers.Model;
 
 import java.util.List;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 @Entity
+@Table
 public class Reviews {
 
     @Id
     private Integer id;
 
-    @OneToMany
-    private List<String> reviews;
+    @Column
+    private String reviews;
 
     public Reviews() {
 
     }
 
-    public Reviews(Integer id, List<String> reviews) {
+    public Reviews(Integer id, String reviews) {
         this.id = id;
         this.reviews = reviews;
     }

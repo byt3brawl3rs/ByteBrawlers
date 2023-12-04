@@ -1,5 +1,6 @@
 package com.ByteBrawlers.ByteBrawlers.Controller;
 
+import com.ByteBrawlers.ByteBrawlers.Service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,9 +12,9 @@ import com.ByteBrawlers.ByteBrawlers.Model.Reviews;
 public class ReviewController {
 
     @Autowired
-    private Reviews review;
+    private ReviewService review;
 
-    public ReviewController(Reviews review) {
+    public ReviewController(ReviewService review) {
         this.review = review;
     }
 }
