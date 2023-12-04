@@ -22,9 +22,19 @@ const CartItem = ({ item, onDelete, onChange }) => {
                 <label>
                     Quantity:
                     <div className="quantity-container">
-                        <button onClick={() => handleQuantityChange(-1)}>-</button>
+                        <button
+                            className="quantity-button minus-button"
+                            onClick={() => handleQuantityChange(-1)}
+                        >
+                            -
+                        </button>
                         <span className="quantity-display">{item.quantity}</span>
-                        <button onClick={() => handleQuantityChange(1)}>+</button>
+                        <button
+                            className="quantity-button plus-button"
+                            onClick={() => handleQuantityChange(1)}
+                        >
+                            +
+                        </button>
                     </div>
                 </label>
                 <label>

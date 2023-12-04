@@ -48,7 +48,7 @@
 }
 
 .remove-button {
-    background-color: #ff4d4d;
+    background-color: #CD5C5C;
     color: white;
     padding: 8px;
     border: none;
@@ -71,7 +71,7 @@
 }
 
 .checkout-button {
-    background-color: #4caf50;
+    background-color: #CD5C5C;
     color: white;
     padding: 10px;
     border: none;
@@ -80,7 +80,7 @@
 }
 
 .checkout-button:hover {
-    background-color: #45a049;
+    background-color: #CD5C5C;
 }
 
 /* Adjust the positioning of cart summary elements */

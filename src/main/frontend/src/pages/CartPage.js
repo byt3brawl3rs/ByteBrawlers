@@ -23,10 +23,24 @@ class CartPage extends Component {
                 quantity: 1,
                 size: 'L',
             },
-            // Add more items as needed
+            {
+                id: 3,
+                name: 'Miami T-Shirt',
+                price: 9.99,
+                quantity: 1,
+                size: 'L',
+            },
+            {
+                id: 4,
+                name: 'Winter Jacket',
+                price: 199.99,
+                quantity: 1,
+                size: 'L',
+            },
         ],
         taxRate: 0.08, // Example tax rate (8%)
         shippingHandlingFee: 15.0, // Combined shipping and handling fee
+        nothingShipping: 0.0,
     };
 
     calculateSubtotal = () => {
@@ -59,25 +73,61 @@ class CartPage extends Component {
 
     render() {
         const { cartItems } = this.state;
+        const stage = 'Cart'; // Set the current stage
+
+        // Group the items into pairs
+        const itemsInPairs = [];
+        for (let i = 0; i < cartItems.length; i += 2) {
+            const pair = cartItems.slice(i, i + 2);
+            itemsInPairs.push(pair);
+        }
 
         return (
             <div className="CartPage">
                 <Header />
+                        {/* New section for the checkout stage */}
+                        <div className="checkout-stage">
+                          <p className={stage === 'Cart' ? 'active' : 'inactive'}>Cart</p>
+                          <p className={stage === 'Checkout' ? 'active' : 'inactive'}>Checkout</p>
+                          <p className={stage === 'Payment' ? 'active' : 'inactive'}>Payment</p>
+                          <p className={stage === 'OrderComplete' ? 'active' : 'inactive'}>Order Complete</p>
+                        </div>
+                        <div className="cart-summary2">
+                            <div className="subtotal">
+                                <p>Subtotal: ${this.calculateSubtotal().toFixed(2)}</p>
+                            </div>
+                            <div className="taxes">
+                                <p>Taxes: ${this.calculateTax().toFixed(2)}</p>
+                            </div>
+                            <div className="shipping-handling">
+                                {cartItems.length === 0 ? (<p>Shipping & Handling: ${this.state.nothingShipping.toFixed(2)}</p>) :
+                                 (<p>Shipping & Handling: ${this.state.shippingHandlingFee.toFixed(2)}</p>)}
+                            </div>
+                            <div className="total">
+                             {cartItems.length === 0 ? (<p>Total: ${this.state.nothingShipping.toFixed(2)}</p>) :
+                                                             (<p>Total: ${this.calculateTotal()}</p>)}
+
+                            </div>
+                        </div>
                 <div className="cart-container">
                     <h2>Your Shopping Cart</h2>
                     {cartItems.length === 0 ? (
                         <p>Your cart is empty.</p>
                     ) : (
                         <div>
-                            {cartItems.map((item) => (
-                                <CartItem
-                                    key={item.id}
-                                    item={item}
-                                    onDelete={() => this.handleDeleteItem(item.id)}
-                                    onChange={(property, value) =>
-                                        this.handleChangeItem(item.id, property, value)
-                                    }
-                                />
+                            {itemsInPairs.map((pair, index) => (
+                                <div key={index} className="cart-row">
+                                    {pair.map((item) => (
+                                        <CartItem
+                                            key={item.id}
+                                            item={item}
+                                            onDelete={() => this.handleDeleteItem(item.id)}
+                                            onChange={(property, value) =>
+                                                this.handleChangeItem(item.id, property, value)
+                                            }
+                                        />
+                                    ))}
+                                </div>
                             ))}
                             <div className="cart-buttons">
                                 <Link to="/">
@@ -98,10 +148,12 @@ class CartPage extends Component {
                         <p>Taxes: ${this.calculateTax().toFixed(2)}</p>
                     </div>
                     <div className="shipping-handling">
-                        <p>Shipping & Handling: ${this.state.shippingHandlingFee.toFixed(2)}</p>
+                        {cartItems.length === 0 ? (<p>Shipping & Handling: ${this.state.nothingShipping.toFixed(2)}</p>) :
+                            (<p>Shipping & Handling: ${this.state.shippingHandlingFee.toFixed(2)}</p>)}
                     </div>
                     <div className="total">
-                        <p>Total: ${this.calculateTotal()}</p>
+                        {cartItems.length === 0 ? (<p>Total: ${this.state.nothingShipping.toFixed(2)}</p>) :
+                                                                                     (<p>Total: ${this.calculateTotal()}</p>)}
                     </div>
                 </div>
             </div>
