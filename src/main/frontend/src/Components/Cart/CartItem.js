@@ -3,12 +3,17 @@ import React from 'react';
 
 const CartItem = ({ item, onDelete, onChange }) => {
     const handleQuantityChange = (value) => {
-        onChange('quantity', item.quantity + value);
-    };
+            const newQuantity = item.quantity + value;
 
-    const handleSizeChange = (event) => {
-        onChange('size', event.target.value);
-    };
+            // Ensure the quantity doesn't go below 1
+            if (newQuantity >= 1) {
+                onChange('quantity', newQuantity);
+            }
+        };
+
+        const handleSizeChange = (event) => {
+            onChange('size', event.target.value);
+        };
 
     return (
         <div className="cart-item">
