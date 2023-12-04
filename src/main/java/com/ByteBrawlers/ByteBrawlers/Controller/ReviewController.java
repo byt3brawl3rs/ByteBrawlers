@@ -2,6 +2,7 @@ package com.ByteBrawlers.ByteBrawlers.Controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,10 @@ import jakarta.annotation.PostConstruct;
 @CrossOrigin
 public class ReviewController {
 
-    public ReviewController(Reviews review) {
+    @Autowired
+    private ReviewService reviewService;
+
+    public ReviewController(ReviewService reviewService) {
     }
 
     @PostConstruct
@@ -26,7 +30,5 @@ public class ReviewController {
     @GetMapping
     public List<String> getReviews() {
         return ReviewService.getAllReviews();
-    }
-    public ReviewController(ReviewService review) {
     }
 }

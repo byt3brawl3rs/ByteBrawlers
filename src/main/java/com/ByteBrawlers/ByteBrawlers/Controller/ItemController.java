@@ -98,10 +98,10 @@ public class ItemController {
         return itemService.getAllBySearchParameter(searchParameter);
     }
 
-    @GetMapping("/search/{searchParameter}")
-    public List<Item> searchBarDescription(@PathVariable("") String searchParameter){
-        return itemService.getAllByDescription(searchParameter);
-    }
+//    @GetMapping("/search/{searchParameter}")
+//    public List<Item> searchBarDescription(@PathVariable("") String searchParameter){
+//        return itemService.getAllByDescription(searchParameter);
+//    }
 
 
 }
