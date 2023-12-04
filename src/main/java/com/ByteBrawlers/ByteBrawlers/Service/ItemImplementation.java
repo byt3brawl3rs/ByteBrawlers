@@ -80,6 +80,6 @@ public class ItemImplementation implements ItemService {
 
     @Override
     public List<Item> getAllByDescription(String description) {
-        return itemRepository.findAllByDescription(description);
+        return itemRepository.findAllBySearchParameter(description);
     }
 }
