@@ -1,5 +1,6 @@
 // CheckoutButton.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CheckoutButton = ({ total }) => {
     const handleCheckout = () => {
@@ -10,7 +11,9 @@ const CheckoutButton = ({ total }) => {
     return (
         <div className="checkout-button-container">
             <button className="checkout-button" onClick={handleCheckout}>
-                Proceed to Checkout
+                <Link to="/checkout" className="checkout-button">
+                    Proceed to Checkout
+                </Link>
             </button>
         </div>
     );
