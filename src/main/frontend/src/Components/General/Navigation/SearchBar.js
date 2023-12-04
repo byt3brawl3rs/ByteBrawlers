@@ -9,6 +9,7 @@ function SearchBar(props) {
     useEffect(() => {
         const keyDownHandler = event => {
             if (event.key === "Enter") {
+                localStorage.setItem("searchParameter", value);
                 navigation("/search");
             }
         }

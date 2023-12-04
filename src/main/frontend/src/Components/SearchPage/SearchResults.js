@@ -8,7 +8,7 @@ function SearchResults() {
 
     useEffect(() => {
         setLoading(true);
-        fetch("http://localhost:8080/items")
+        fetch("http://localhost:8080/items/search/Sweatpants")
             .then(response => response.json())
             .then((data) => {
                 setItems(data);

@@ -79,16 +79,22 @@ public class ItemController {
     }
 
     @GetMapping("/formfactor/{formFactorId}")
-    public List<Item> getItemsByFormFactorId(@PathVariable("formFactorId") Integer formFactorId){
+    public List<Item> getItemsByFormFactorId(@PathVariable("formFactorId") Integer formFactorId) {
         return itemService.getItemsByFormFactorId(formFactorId);
     }
 
     @GetMapping("/pricelower20")
-    public List<Item> getItemsWherePriceLower20(){
+    public List<Item> getItemsWherePriceLower20() {
         return itemService.getAllItemsWherePriceLower20();
     }
+
     @GetMapping("/featuredItems")
     public List<Item> getFiveRandomItems() {
         return itemService.getFiveRandomItems();
+    }
+
+    @GetMapping("/search/{searchParameter}")
+    public List<Item> searchBarFeature(@PathVariable("") String searchParameter) {
+        return null;
     }
 }
