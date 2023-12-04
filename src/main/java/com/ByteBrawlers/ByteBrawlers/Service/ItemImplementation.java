@@ -73,5 +73,10 @@ public class ItemImplementation implements ItemService {
         return itemRepository.findFiveRandomItems();
     }
 
+    @Override
+    public List<Item> getAllBySearchParameter(String searchParam) {
+        return itemRepository.findAllBySearchParameter(searchParam);
+    }
+
 
 }

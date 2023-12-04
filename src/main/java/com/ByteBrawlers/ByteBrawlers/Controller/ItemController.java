@@ -95,6 +95,6 @@ public class ItemController {
 
     @GetMapping("/search/{searchParameter}")
     public List<Item> searchBarFeature(@PathVariable("") String searchParameter) {
-        return null;
+        return itemService.getAllBySearchParameter(searchParameter);
     }
 }
