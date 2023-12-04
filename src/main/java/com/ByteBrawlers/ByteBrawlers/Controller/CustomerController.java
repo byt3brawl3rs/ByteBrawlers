@@ -57,7 +57,6 @@ public class CustomerController {
 
     @PostMapping("/login/{username}")
     public ResponseEntity<Customer> getCustomerByUsername(@PathVariable("username") String username) {
-        System.out.println(username);
         Customer customerResponse = customerService.getCustomerByUsername(username);
         return ResponseEntity.status(HttpStatus.OK).body(customerResponse);
     }

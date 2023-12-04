@@ -2,9 +2,10 @@ import React, {useEffect, useState} from "react";
 import Header from "../Components/General/Navigation/Header";
 import Footer from "../Components/General/ExtendedInformation/Footer";
 import "../Components/MainWebPage/CSS/ItemPage.css";
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 function ItemPage() {
+    const navigate = useNavigate();
     const {state} = useLocation();
     const {id} = state;
 
@@ -24,6 +25,17 @@ function ItemPage() {
         }
 
         , [])
+
+    const toCart = () => {
+        navigate("/cart", {
+            state: {
+                itemName: item.title,
+                itemPrice: item.price,
+                itemQuantity: document.querySelector(".quantity-selector input").value,
+                itemSize: document.querySelector(".size-selector select").value,
+            },
+        });
+    };
 
     if (loading) {
         return <p>Loading...</p>;
@@ -57,7 +69,7 @@ function ItemPage() {
                                 <option value="2xl">XX-Large</option>
                             </select>
                         </div>
-                        <button className="button">Add to Cart</button>
+                        <button type="submit" className="button" onClick={toCart}>Add to Cart</button>
                     </div>
                 </div>
             </div>
