@@ -1,7 +1,7 @@
 .MainBox {
     border: 2px solid #ddd;
     padding: 20px;
-    width: 80%;
+    width: 100%;
     max-width: 400px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -69,7 +69,6 @@
 }
 
 .MainBox .form-check-input {
-    margin-right: 10px;
 }
 
 .MainBox .form-check-label {
@@ -100,12 +99,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin-top: 10px;
 }
 
-.icon-selection .icon-button-left{
-    margin-right: 10px;
+.icon-selection .icon-button-left {
 }
 
 .icon {

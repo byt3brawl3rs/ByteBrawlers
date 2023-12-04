@@ -28,8 +28,13 @@ function LoginBox() {
                     })
                         .then(response => response.json())
                         .then(data => {
-                            console.log(data.id);
-                            setCustomerId(data.id);
+                            localStorage.setItem("currentUser", JSON.stringify({
+                                id: data.id,
+                                username: data.username,
+                                first: data.firstName,
+                                last: data.lastName
+                            }));
+                            localStorage.setItem("isLoggedIn", true);
                             navigate("/");
                         })
                 } else {

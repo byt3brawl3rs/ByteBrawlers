@@ -17,22 +17,26 @@
     width: 30%; /* Adjust the width as needed */
     padding-left: 20px; /* Add some space between cart items and cart summary */
 }
-.cart-row {
-     display: flex;
-     justify-content: space-between;
-     margin-bottom: 10px;
- }
 
- /*.cart-summary-container {
-     position: absolute;
-     top: 0;
-     right: 0;
-     width: 30%;
- }*/
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/*.cart-summary-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+}*/
 
 .cart-item {
     /*display: flex;
     flex-direction: column;*/
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/RippedJeans.jpg");
+    background-position: center center;
+    background-size: 110%;
     flex-grow: 1;
     border: 1px solid #ccc;
     padding: 10px;
@@ -84,12 +88,12 @@
 }
 
 .remove-button {
-   background-color: #CD5C5C;
-   color: white;
-   padding: 8px;
-   border: none;
-   width: auto;
-   cursor: pointer;
+    background-color: #CD5C5C;
+    color: white;
+    padding: 8px;
+    border: none;
+    width: auto;
+    cursor: pointer;
 }
 
 .back-to-shopping {
@@ -128,6 +132,7 @@
     top: 10;
     right: -10;
 }
+
 .cart-summary2 {
     padding-right: 50px; /* Add some space between cart items and cart summary */
     padding-top: 50px;
@@ -147,23 +152,23 @@
 }
 
 .checkout-stage {
-  display: flex;
-  justify-content: space-around;
-  background-color: #f0f0f0;
-  padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 10px;
 }
 
 .checkout-stage p {
-  margin: 0;
-  padding: 5px;
-  cursor: pointer;
+    margin: 0;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .active {
-  font-weight: bold;
-  color: #00cc00;
+    font-weight: bold;
+    color: #00cc00;
 }
 
 .inactive {
-  color: #888;
+    color: #888;
 }

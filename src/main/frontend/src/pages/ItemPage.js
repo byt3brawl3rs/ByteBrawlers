@@ -25,8 +25,9 @@ function ItemPage() {
     }, [])
 
     const addToCart = () => {
-        let items = localStorage.getItem("cart") || [];
-        items.push(item)
+        let items = JSON.parse(localStorage.getItem("cart")) || {};
+        localStorage.setItem("numItemsInCart", parseInt(localStorage.getItem("numItemsInCart") || 0) + 1)
+        items[`cart${localStorage.getItem("numItemsInCart")}`] = item;
         localStorage.setItem("cart", JSON.stringify(items))
         navigate("/");
     };
