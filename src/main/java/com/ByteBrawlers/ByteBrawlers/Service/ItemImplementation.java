@@ -78,5 +78,8 @@ public class ItemImplementation implements ItemService {
         return itemRepository.findAllBySearchParameter(searchParam);
     }
 
-
+    @Override
+    public List<Item> getAllByDescription(String description) {
+        return itemRepository.findAllByDescription(description);
+    }
 }
