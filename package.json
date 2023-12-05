@@ -15,8 +15,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "start": "cd frontend && npm start",
+    "start:backend": "cd backend && ./mvnw spring-boot:run",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "proxy": "http://ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm",
   "eslintConfig": {

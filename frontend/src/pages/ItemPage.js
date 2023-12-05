@@ -15,7 +15,7 @@ function ItemPage() {
     useEffect(() => {
         setLoading(true);
 
-        fetch(`items/${id}`)
+        fetch(`http://ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm/items/${id}`)
             .then(response => response.json()
             ).then(data => {
             setItem(data)

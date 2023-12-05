@@ -11,9 +11,9 @@ function SearchResults() {
         const searchParameter = localStorage.getItem("searchParameter")
         let url = ""
         if (searchParameter === null || searchParameter === "") {
-            url = `items/search`
+            url = `http://ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm/items/search`
         } else {
-            url = `items/search/${searchParameter}`
+            url = `http://ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm/items/search/${searchParameter}`
         }
 
         fetch(url)
