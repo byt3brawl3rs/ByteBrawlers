@@ -1,1 +1,1 @@
-web: node src/main/frontend/src/index.js -port 8000
+web java -Dserver.port=$PORT $JAVA_OPTS -jar target/ByteBrawlers-0.0.1-SNAPSHOT.jar
