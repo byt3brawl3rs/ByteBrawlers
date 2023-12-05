@@ -1,1 +1,1 @@
-web: java -jar backend/target/ByteBrawlers-0.0.1-SNAPSHOT.jar
+web: web: cd frontend && npm install && npm run build && cd ../backend && mvn clean install && java -jar target/ByteBrawlers-0.0.1-SNAPSHOT.jar
