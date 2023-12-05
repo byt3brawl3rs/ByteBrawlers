@@ -16,7 +16,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "proxy": "http://ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm",
   "eslintConfig": {
