@@ -1,0 +1,24 @@
+.OrderPage {
+}
+
+.orders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-item {
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.back-button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
