@@ -1,1 +1,1 @@
-web: cd backend && ./mvnw spring-boot:run
+web: java -jar backend/target/ByteBrawlers-0.0.1-SNAPSHOT.jar
