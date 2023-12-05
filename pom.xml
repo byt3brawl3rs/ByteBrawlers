@@ -108,7 +108,7 @@
                 </executions>
                 <configuration>
                     <nodeVersion>v18.18.2</nodeVersion>
-                    <workingDirectory>../frontend</workingDirectory>
+                    <workingDirectory>frontend</workingDirectory>
                 </configuration>
             </plugin>
 
@@ -123,7 +123,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>../../target/classes/static</outputDirectory>
+                            <outputDirectory>../target/classes/static</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>frontend/build</directory>
