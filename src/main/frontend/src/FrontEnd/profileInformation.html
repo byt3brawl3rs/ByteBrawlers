@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Information</title>
+  <script>
+    window.onload = function displayProfileInfo() {
+      // Retrieve info from session storage
+      const fullname = sessionStorage.getItem('fullname');
+      const username = sessionStorage.getItem('username');
+      const email = sessionStorage.getItem('email');
+      // Display them in the page
+      document.getElementById('displayFullname').innerText = fullname;
+      document.getElementById('displayUsername').innerText = username;
+      document.getElementById('displayEmail').innerText = email;
+    }
+  </script>
+</head>
+<body>
+<section id="profile-info">
+  <h2>Profile Information</h2>
+  <p>Name: <span id="displayFullname"></span></p>
+  <p>Username: <span id="displayUsername"></span></p>
+  <p>Email: <span id="displayEmail"></span></p>
+</section>
+</body>
+</html>
