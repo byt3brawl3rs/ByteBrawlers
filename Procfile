@@ -1,1 +1,1 @@
-web: node server/index.js -port 8000
+web: node src/main/frontend/src/index.js -port 8000
