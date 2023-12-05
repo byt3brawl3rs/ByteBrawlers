@@ -1,1 +1,1 @@
-web: cd frontend && npm install && npm start & cd ../backend && mvn spring-boot:run
+web: cd frontend && npm install && npm run build && cd ../backend && mvn clean install && mvn spring-boot:run
