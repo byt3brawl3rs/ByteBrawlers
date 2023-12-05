@@ -1,1 +1,1 @@
-web: cd frontend && npm install && npm run build && cd ../backend && ./mvnw clean install && java -jar target/ByteBrawlers-0.0.1-SNAPSHOT.jar
+web: cd frontend && npm install && npm run build && ./mvnw clean install && cd ../backend &&  java -jar target/ByteBrawlers-0.0.1-SNAPSHOT.jar
