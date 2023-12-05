@@ -15,9 +15,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "install-all": "npm install --prefix frontend && npm install --prefix backend",
-    "start": "npm run install-all && concurrently \"npm start --prefix frontend\" \"npm run backend\"",
-    "backend": "cd backend && ./mvnw spring-boot:run"
+    "install-frontend": "npm install --prefix frontend",
+    "start": "npm run install-frontend && concurrently \"npm start --prefix frontend\" \"cd backend && ./mvnw spring-boot:run\""
   },
   "eslintConfig": {
     "extends": [
