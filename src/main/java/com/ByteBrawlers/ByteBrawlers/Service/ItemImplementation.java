@@ -68,7 +68,7 @@ public class ItemImplementation implements ItemService {
         return itemRepository.findAllByPriceLower20();
     }
 
-    
+
     public List<Item> getFiveRandomItems() {
         return itemRepository.findFiveRandomItems();
     }
@@ -76,10 +76,5 @@ public class ItemImplementation implements ItemService {
     @Override
     public List<Item> getAllBySearchParameter(String searchParam) {
         return itemRepository.findAllBySearchParameter(searchParam);
-    }
-
-    @Override
-    public List<Item> getAllByDescription(String description) {
-        return itemRepository.findAllBySearchParameter(description);
     }
 }

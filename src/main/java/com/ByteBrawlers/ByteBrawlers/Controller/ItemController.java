@@ -42,6 +42,11 @@ public class ItemController {
         return itemService.getAllItems();
     }
 
+    @GetMapping("/search")
+    public List<Item> getItemsSearch() {
+        return itemService.getAllItems();
+    }
+
     @GetMapping("{id}")
     public ResponseEntity<Item> getItem(@PathVariable("id") Integer id) {
         Item itemResponse = itemService.getItem(id);
@@ -95,13 +100,7 @@ public class ItemController {
 
     @GetMapping("/search/{searchParameter}")
     public List<Item> searchBarFeature(@PathVariable("searchParameter") String searchParameter) {
+        System.out.println(searchParameter);
         return itemService.getAllBySearchParameter(searchParameter);
     }
-
-//    @GetMapping("/search/{searchParameter}")
-//    public List<Item> searchBarDescription(@PathVariable("") String searchParameter){
-//        return itemService.getAllByDescription(searchParameter);
-//    }
-
-
 }

@@ -53,7 +53,7 @@ function LoginBox() {
                                onChange={event => setUsername(event.target.value)}/>
                         <br/>
                         <label htmlFor="password"><b>Password</b></label>
-                        <input name="password" id="password" type="text" value={password}
+                        <input name="password" id="password" type="password" value={password}
                                onChange={event => setPassword(event.target.value)}/>
                         <br/>
                         <button type="submit" onClick={login}>Login</button>

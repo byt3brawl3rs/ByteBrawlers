@@ -9,7 +9,7 @@ import cartItem from "../Components/Cart/CartItem"; // Import the cart styles
 
 class CartPage extends Component {
     state = {
-        cartItems: JSON.parse(localStorage.getItem("cart")),
+        cartItems: JSON.parse(localStorage.getItem("cart")) || {},
         taxRate: 0.08, // Example tax rate (8%)
         shippingHandlingFee: 15.0, // Combined shipping and handling fee
         nothingShipping: 0.0,

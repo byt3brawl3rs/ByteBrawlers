@@ -8,7 +8,15 @@ function SearchResults() {
 
     useEffect(() => {
         setLoading(true);
-        fetch("http://localhost:8080/items")
+        const searchParameter = localStorage.getItem("searchParameter")
+        let url = ""
+        if (searchParameter === null || searchParameter === "") {
+            url = `http://localhost:8080/items/search`
+        } else {
+            url = `http://localhost:8080/items/search/${searchParameter}`
+        }
+
+        fetch(url)
             .then(response => response.json())
             .then((data) => {
                 setItems(data);
