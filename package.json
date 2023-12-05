@@ -15,12 +15,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm install",
-    "dev": "concurrently \"npm start\" \"cd ../backend && ./mvnw spring-boot:run\""
+    "install-all": "npm install --prefix frontend && npm install --prefix backend",
+    "start": "npm run install-all && concurrently \"npm start --prefix frontend\" \"npm run backend\"",
+    "backend": "cd backend && ./mvnw spring-boot:run"
   },
   "eslintConfig": {
     "extends": [
