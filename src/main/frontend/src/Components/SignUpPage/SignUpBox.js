@@ -15,7 +15,7 @@ function SignUpBox() {
     const signup = (event) => {
         event.preventDefault();
         const customerProfile = {firstName, lastName, email, username, password}
-        fetch("http://localhost:8080/customer", {
+        fetch("http://ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm/customer", {
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(customerProfile)
