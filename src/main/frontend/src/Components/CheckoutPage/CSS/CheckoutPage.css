@@ -1,0 +1,93 @@
+/* checkout-style.css */
+.CheckoutPage {
+    /*display: flex;*/
+    padding: 0px;
+}
+
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 50%; /* Adjust the width as needed */
+    padding-right: 20px; /* Add some space between checkout items and checkout summary */
+}
+
+.checkout-summary {
+    width: 30%; /* Adjust the width as needed */
+    padding-left: 20px; /* Add some space between checkout items and checkout summary */
+}
+
+.checkout-item {
+    /*display: flex;
+    flex-direction: column;*/
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-display {
+    margin: 0 10px; /* Add space between the quantity container and buttons */
+}
+
+.checkout-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.remove-button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px;
+    border: none;
+    width: 10%;
+    cursor: pointer;
+}
+
+.back-to-shopping {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.remove-button:hover,
+.back-to-shopping:hover {
+    background-color: #e60000;
+}
+
+.checkout-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.checkout-button:hover {
+    background-color: #45a049;
+}
+
+/* Adjust the positioning of checkout summary elements */
+.checkout-summary p {
+    margin: 8px 0;
+}
+
+.checkout-summary .total {
+    font-weight: bold;
+}

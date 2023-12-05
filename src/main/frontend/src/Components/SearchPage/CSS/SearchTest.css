@@ -1,0 +1,38 @@
+.SearchTest {
+    background-color: #f5e8e0ff;
+    display: grid;
+    padding: 30px 30px 30px 0;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+}
+
+.SearchTest .SearchResults {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-gap: 10px;
+}
+
+.SearchTest .SearchResults .ItemCard {
+    width: 100%;
+}
+
+.SearchTest .SearchResults .ItemCard:nth-child(5n + 1) {
+    grid-column: 2;
+}
+
+.SearchTest .SearchResults .ItemCard:nth-child(5n + 2) {
+    grid-column: 3;
+}
+
+.SearchTest .SearchResults .ItemCard:nth-child(5n + 3) {
+    grid-column: 4;
+}
+
+.SearchTest .SearchResults .ItemCard:nth-child(5n + 4) {
+    grid-column: 5;
+}
+
+.SearchTest .SearchResults .ItemCard:nth-child(5n + 5) {
+    grid-column: 6;
+}

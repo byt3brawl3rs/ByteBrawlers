@@ -1,0 +1,900 @@
+0
+Great for when you want to impress your date
+15.99
+4
+Sweatpants
+10
+3
+1
+0
+1
+Great quality for a great price
+64.99
+5
+Sweater
+7
+2
+0
+3
+2
+You will be the talk of the town
+68.99
+2
+Tank Top
+13
+0
+0
+1
+3
+Perfect for a night out on the town
+12.99
+1
+Sweatpants
+2
+2
+3
+0
+4
+Perfect for a night out on the town
+33.99
+5
+Shorts
+1
+1
+0
+1
+5
+Perfect for a night out on the town
+53.99
+4
+Sweater
+8
+2
+3
+4
+6
+Perfect for a night out on the town
+12.99
+4
+Sweatshirt
+0
+3
+3
+1
+7
+Perfect for a night out on the town
+3.99
+1
+Shorts
+7
+0
+1
+4
+8
+Great quality for a great price
+11.99
+2
+Shorts
+10
+3
+1
+0
+9
+People will turn their heads when you walk by
+29.99
+5
+Shorts
+7
+3
+5
+1
+10
+You will be the envy of all your friends
+32.99
+3
+Shorts
+10
+2
+2
+5
+11
+Great quality for a great price
+28.99
+4
+Jacket
+0
+0
+2
+4
+12
+Great quality for a great price
+23.99
+2
+Sweatshirt
+3
+2
+0
+3
+13
+You will be the talk of the town
+39.99
+1
+Sweatshirt
+3
+0
+2
+3
+14
+People will turn their heads when you walk by
+46.99
+4
+Sweatpants
+12
+3
+1
+0
+15
+People will turn their heads when you walk by
+52.99
+3
+Tank Top
+7
+1
+1
+3
+16
+Great for when you want to impress your date
+5.99
+2
+Sweatpants
+7
+1
+0
+3
+17
+Great for when you want to impress your date
+34.99
+1
+Shorts
+9
+0
+2
+3
+18
+You will be the envy of all your friends
+38.99
+5
+Sweatpants
+4
+1
+0
+0
+19
+People will turn their heads when you walk by
+4.99
+4
+Shorts
+3
+1
+0
+3
+20
+This can be worn with anything!
+53.99
+2
+Shorts
+4
+1
+3
+5
+21
+This can be worn with anything!
+45.99
+3
+Shorts
+8
+3
+0
+2
+22
+You will be the envy of all your friends
+65.99
+2
+Dress Shirt
+4
+1
+1
+0
+23
+You will be the talk of the town
+54.99
+5
+Sweatshirt
+2
+2
+5
+3
+24
+This can be worn with anything!
+4.99
+3
+Tank Top
+10
+0
+5
+2
+25
+Great quality for a great price
+1.99
+2
+Sweatshirt
+2
+1
+1
+2
+26
+This can be worn with anything!
+51.99
+5
+Sweatshirt
+12
+3
+5
+4
+27
+Great for when you want to impress your date
+65.99
+5
+Sweatshirt
+2
+1
+4
+0
+28
+This can be worn with anything!
+29.99
+3
+Sweatpants
+6
+3
+2
+5
+29
+Great for when you want to impress your date
+68.99
+4
+Tank Top
+11
+3
+0
+2
+30
+Great quality for a great price
+35.99
+2
+Sweatpants
+10
+0
+3
+5
+31
+You will be the envy of all your friends
+11.99
+3
+Sweatpants
+10
+1
+4
+1
+32
+Perfect for a night out on the town
+67.99
+5
+Tank Top
+12
+2
+2
+1
+33
+Perfect for a night out on the town
+55.99
+1
+Socks
+4
+0
+1
+2
+34
+You will be the envy of all your friends
+22.99
+3
+Sweatpants
+2
+0
+5
+2
+35
+You will be the talk of the town
+34.99
+3
+Sweatpants
+8
+2
+5
+1
+36
+You will be the envy of all your friends
+63.99
+4
+Tank Top
+12
+0
+5
+2
+37
+You will be the talk of the town
+17.99
+1
+Sweatshirt
+0
+2
+3
+0
+38
+Great quality for a great price
+53.99
+5
+Sweatpants
+9
+0
+1
+3
+39
+Great quality for a great price
+35.99
+2
+T-Shirt
+6
+0
+5
+1
+40
+This can be worn with anything!
+51.99
+5
+Sweater
+9
+2
+5
+1
+41
+Great for when you want to impress your date
+66.99
+2
+Sweatpants
+0
+3
+5
+3
+42
+Great quality for a great price
+55.99
+4
+T-Shirt
+8
+3
+0
+3
+43
+This can be worn with anything!
+64.99
+4
+Sweatshirt
+5
+0
+2
+5
+44
+Great for when you want to impress your date
+68.99
+3
+Sweatshirt
+6
+2
+4
+0
+45
+Great quality for a great price
+29.99
+1
+Shorts
+5
+0
+2
+1
+46
+People will turn their heads when you walk by
+11.99
+4
+Sweatpants
+1
+0
+4
+3
+47
+This can be worn with anything!
+66.99
+1
+Sweatshirt
+2
+0
+5
+3
+48
+Great quality for a great price
+34.99
+4
+Shorts
+13
+0
+4
+2
+49
+You will be the envy of all your friends
+1.99
+2
+Scarf
+13
+1
+3
+0
+50
+Great for when you want to impress your date
+38.99
+1
+Tank Top
+10
+3
+4
+0
+51
+You will be the talk of the town
+7.99
+1
+Sweatshirt
+3
+2
+2
+2
+52
+People will turn their heads when you walk by
+24.99
+1
+Tank Top
+5
+1
+5
+5
+53
+You will be the talk of the town
+29.99
+4
+Shorts
+1
+0
+4
+4
+54
+Perfect for a night out on the town
+17.99
+2
+Shorts
+2
+2
+2
+4
+55
+People will turn their heads when you walk by
+24.99
+5
+Ripped Jeans
+10
+0
+4
+0
+56
+Perfect for a night out on the town
+55.99
+4
+Shorts
+8
+3
+5
+1
+57
+Great quality for a great price
+11.99
+3
+Tank Top
+11
+0
+5
+3
+58
+Great quality for a great price
+61.99
+2
+Shorts
+12
+3
+0
+3
+59
+You will be the envy of all your friends
+48.99
+5
+Sweatpants
+1
+1
+2
+4
+60
+This can be worn with anything!
+24.99
+5
+Shorts
+5
+2
+0
+2
+61
+People will turn their heads when you walk by
+5.99
+5
+Shorts
+9
+2
+4
+0
+62
+You will be the envy of all your friends
+57.99
+2
+Sweatpants
+12
+2
+2
+1
+63
+Perfect for a night out on the town
+58.99
+3
+Coat
+6
+1
+0
+5
+64
+You will be the envy of all your friends
+4.99
+4
+Shorts
+10
+3
+4
+3
+65
+You will be the envy of all your friends
+43.99
+5
+Ripped Jeans
+2
+2
+2
+3
+66
+Perfect for a night out on the town
+2.99
+3
+Sweatpants
+4
+0
+2
+5
+67
+People will turn their heads when you walk by
+31.99
+4
+Sweatpants
+4
+1
+3
+3
+68
+People will turn their heads when you walk by
+45.99
+4
+Scarf
+11
+1
+0
+4
+69
+You will be the envy of all your friends
+23.99
+4
+Dress Shirt
+12
+2
+0
+2
+70
+Great for when you want to impress your date
+17.99
+1
+Sweatpants
+12
+0
+0
+5
+71
+This can be worn with anything!
+69.99
+5
+Shorts
+10
+1
+2
+3
+72
+You will be the envy of all your friends
+54.99
+1
+Shorts
+0
+3
+0
+4
+73
+Great quality for a great price
+54.99
+5
+Tank Top
+10
+0
+1
+2
+74
+You will be the talk of the town
+16.99
+5
+Gloves
+4
+3
+3
+3
+75
+This can be worn with anything!
+27.99
+1
+Shorts
+13
+3
+3
+1
+76
+Great quality for a great price
+14.99
+3
+Tank Top
+4
+3
+5
+1
+77
+This can be worn with anything!
+44.99
+4
+Sweatshirt
+3
+0
+4
+1
+78
+This can be worn with anything!
+44.99
+1
+Tank Top
+4
+1
+5
+5
+79
+You will be the envy of all your friends
+43.99
+4
+Jacket
+2
+3
+1
+2
+80
+People will turn their heads when you walk by
+27.99
+4
+Shorts
+12
+2
+1
+0
+81
+People will turn their heads when you walk by
+67.99
+1
+Sweatshirt
+12
+2
+2
+5
+82
+You will be the envy of all your friends
+32.99
+4
+Tank Top
+0
+2
+5
+2
+83
+You will be the envy of all your friends
+69.99
+5
+Dress Pants
+8
+3
+4
+2
+84
+You will be the envy of all your friends
+12.99
+2
+Sweater
+12
+3
+4
+0
+85
+You will be the envy of all your friends
+57.99
+1
+Sweatpants
+0
+2
+4
+0
+86
+Great quality for a great price
+54.99
+4
+Shorts
+11
+2
+1
+1
+87
+This can be worn with anything!
+27.99
+5
+Sweatshirt
+6
+3
+4
+3
+88
+You will be the envy of all your friends
+41.99
+2
+Shorts
+2
+3
+2
+1
+89
+Great quality for a great price
+37.99
+1
+Socks
+12
+2
+2
+4
+90
+Perfect for a night out on the town
+24.99
+4
+Tank Top
+9
+0
+1
+0
+91
+You will be the envy of all your friends
+55.99
+2
+Sweatshirt
+13
+3
+3
+3
+92
+Great quality for a great price
+53.99
+4
+Sweatshirt
+4
+3
+2
+0
+93
+Great quality for a great price
+33.99
+2
+Sweatshirt
+6
+0
+2
+2
+94
+Great quality for a great price
+49.99
+1
+Shorts
+11
+1
+4
+3
+95
+Perfect for a night out on the town
+3.99
+1
+Sweatpants
+10
+1
+5
+1
+96
+Perfect for a night out on the town
+47.99
+3
+Socks
+0
+2
+0
+3
+97
+Great quality for a great price
+69.99
+5
+Sweatpants
+6
+1
+3
+0
+98
+Perfect for a night out on the town
+57.99
+5
+Tank Top
+4
+0
+2
+2
+99
+People will turn their heads when you walk by
+39.99
+2
+Socks
+12
+0
+0
+2

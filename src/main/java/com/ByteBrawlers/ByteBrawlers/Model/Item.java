@@ -1,44 +1,58 @@
 package com.ByteBrawlers.ByteBrawlers.Model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.annotation.PostConstruct;
+import jakarta.persistence.*;
 
-@Entity
-@Table
+import java.util.List;
+
+@Entity(name = "Item")
+@Table(name = "item")
 public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int itemID;
-    @Column
+    private Integer id;
+    @Column(name = "title")
     private String title;
-    @Column
+    @Column(name = "description")
     private String description;
     @Column
-    private double price;
+    private Integer typeId;
     @Column
+    private Integer colorId;
+    @Column
+    private Integer sizeId;
+    @Column
+    private Integer formFactorId;
+    @Column(name = "price")
+    private double price;
+    @Column(name = "rating")
     private double rating;
+    @OneToMany
+    @JoinColumn()
+    private List<Image> images;
 
     public Item() {
     }
 
-    public Item(String title, String description, double price, double rating) {
+    public Item(Integer id, String title, String description, Integer typeId, Integer colorId, Integer sizeId, Integer formFactorId, double price, double rating) {
+        this.id = id;
         this.title = title;
         this.description = description;
+        this.typeId = typeId;
+        this.colorId = colorId;
+        this.sizeId = sizeId;
+        this.formFactorId = formFactorId;
         this.price = price;
         this.rating = rating;
     }
 
-    public int getItemID() {
-        return itemID;
+    public Integer getItemID() {
+        return id;
     }
 
-    public void setItemID(int itemID) {
-        this.itemID = itemID;
+    public void setItemID(Integer id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -65,6 +79,38 @@ public class Item {
         this.price = price;
     }
 
+    public Integer getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
+    }
+
+    public Integer getColorId() {
+        return colorId;
+    }
+
+    public void setColorId(Integer colorId) {
+        this.colorId = colorId;
+    }
+
+    public Integer getSizeId() {
+        return sizeId;
+    }
+
+    public void setSizeId(Integer sizeId) {
+        this.sizeId = sizeId;
+    }
+
+    public Integer getFormFactorId() {
+        return formFactorId;
+    }
+
+    public void setFormFactorId(Integer formFactorId) {
+        this.formFactorId = formFactorId;
+    }
+
     public double getRating() {
         return rating;
     }
@@ -73,10 +119,35 @@ public class Item {
         this.rating = rating;
     }
 
-    @Override
-    public String toString() {
-        return String.format("Item ID: %d\nTitle: %s\nDescription: %s\n Price: %f\nRating: %f", itemID, title,
-                description, price, rating);
+    public Integer getId() {
+        return id;
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public List<Image> getImages() {
+        return images;
+    }
+
+    public void setImages(List<Image> images) {
+        this.images = images;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", typeId=" + typeId +
+                ", colorId=" + colorId +
+                ", sizeId=" + sizeId +
+                ", formFactorId=" + formFactorId +
+                ", price=" + price +
+                ", rating=" + rating +
+                ", images=" + images +
+                '}';
+    }
 }

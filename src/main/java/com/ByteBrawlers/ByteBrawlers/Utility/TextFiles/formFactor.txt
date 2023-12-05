@@ -1,0 +1,8 @@
+0
+mens
+1
+womens
+2
+kids
+3
+unisex

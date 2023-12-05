@@ -1,16 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import Header from "./Components/Navigation/Header";
-import {FeaturedItems} from "./Components/FeaturedItems/FeaturedItems";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { PageRoutes } from "./PageRoutes";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <React.StrictMode>
-        <Header/>
-        <FeaturedItems/>
-    </React.StrictMode>
+  <React.StrictMode>
+    <PageRoutes />
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -5,7 +5,6 @@ spring:
     url: jdbc:postgresql://ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm
     username: onophtyiuzcmll
 
-
     hikari:
       minimumIdle: 2
       maximumPoolSize: 10
@@ -18,11 +17,13 @@ spring:
     show-sql: true
 
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
 
   web:
     resources:
       static-locations: file:/upload
+
+
 
 #driverClassName: org.postgresql.Driver
 #password: ${PSQL_DB_PASSWORD}
