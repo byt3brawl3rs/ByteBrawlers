@@ -1,1 +1,1 @@
-web npm run start
+web: cd backend && ./mvnw spring-boot:run
