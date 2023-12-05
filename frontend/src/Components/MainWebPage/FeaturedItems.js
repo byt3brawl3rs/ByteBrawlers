@@ -11,7 +11,7 @@ function FeaturedItems(props) {
     useEffect(() => {
         setLoading(true);
 
-        fetch("http://ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm/items/featuredItems")
+        fetch("items/featuredItems")
             .then(response => response.json())
             .then(data => {
                 setCards(data);

@@ -15,7 +15,7 @@ function ItemPage() {
     useEffect(() => {
         setLoading(true);
 
-        fetch(`http://localhost:8080/items/${id}`)
+        fetch(`items/${id}`)
             .then(response => response.json()
             ).then(data => {
             setItem(data)

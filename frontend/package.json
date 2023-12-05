@@ -21,6 +21,7 @@
     "eject": "react-scripts eject",
     "heroku-postbuild": "cd src && index.js"
   },
+  "proxy": "http://ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm",
   "eslintConfig": {
     "extends": [
       "react-app",

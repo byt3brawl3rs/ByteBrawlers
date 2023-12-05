@@ -13,7 +13,7 @@ function LoginBox() {
     const login = (event) => {
         const loginCredentials = {username, password};
         event.preventDefault()
-        const results = fetch(`http://ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm/customer/login`, {
+        const results = fetch(`customer/login`, {
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(loginCredentials)
