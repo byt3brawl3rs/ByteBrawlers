@@ -8,10 +8,16 @@ function FeaturedItems(props) {
     const [loading, setLoading] = useState(false);
     const [visibleSection, setVisibleSection] = useState(0);
 
+    const [databaseUrl, setDatabaseUrl] = useState("");
+
+    useEffect(() => {
+        setDatabaseUrl(window.REACT_APP_DATABASE_URL || 'default-value');
+    }, []);
+
     useEffect(() => {
         setLoading(true);
 
-        fetch("http://ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm/items/featuredItems")
+        fetch(databaseUrl + "/items/featuredItems")
             .then(response => response.json())
             .then(data => {
                 setCards(data);
