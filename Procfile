@@ -1,2 +1,2 @@
-web: npm start && java -Dserver.port=$PORT -jar target/your-app.jar
+web: npm start &&
 worker: node frontend/src/index.js
