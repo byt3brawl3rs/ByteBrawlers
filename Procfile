@@ -1,1 +1,1 @@
-worker: npm start
+worker: npm start && java -Dserver.port=$PORT -jar target/your-app.jar
