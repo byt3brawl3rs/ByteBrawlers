@@ -1,6 +1,6 @@
 HELP.md
-backend/target/
-!.mvn/wrapper/maven-wrapper.jar
+../backend/target/
+!../.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
@@ -14,7 +14,7 @@ backend/target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+../.idea
 *.iws
 *.iml
 *.ipr
@@ -25,7 +25,7 @@ backend/target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
+../build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 

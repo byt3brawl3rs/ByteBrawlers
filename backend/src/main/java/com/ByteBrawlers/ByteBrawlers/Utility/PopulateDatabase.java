@@ -2,7 +2,6 @@ package com.ByteBrawlers.ByteBrawlers.Utility;
 
 import com.ByteBrawlers.ByteBrawlers.Model.*;
 import com.ByteBrawlers.ByteBrawlers.Repository.*;
-import com.ByteBrawlers.ByteBrawlers.Service.TypeService;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -10,8 +9,6 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Optional;
 import java.util.Scanner;
 
 @Component

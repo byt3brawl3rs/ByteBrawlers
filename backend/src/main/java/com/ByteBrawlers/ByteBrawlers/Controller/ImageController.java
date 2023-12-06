@@ -1,7 +1,6 @@
 package com.ByteBrawlers.ByteBrawlers.Controller;
 
 import com.ByteBrawlers.ByteBrawlers.Model.Image;
-import com.ByteBrawlers.ByteBrawlers.Model.Item;
 import com.ByteBrawlers.ByteBrawlers.Service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
