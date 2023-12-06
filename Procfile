@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar backend/target/ByteBrawlers-0.0.1-SNAPSHOT.jar
+web: java -Dserver.port=$PORT -cp target/classes com.ByteBrawlers.ByteBrawlers.ByteBrawlersApplication
