@@ -3,11 +3,6 @@ import {useNavigate} from "react-router-dom";
 import './CSS/SignUpBox.css';
 
 function LoginBox() {
-    const [databaseUrl, setDatabaseUrl] = useState("");
-
-    useEffect(() => {
-        setDatabaseUrl(window.REACT_APP_DATABASE_URL || 'default-value');
-    }, []);
 
     const [customerId, setCustomerId] = useState(0);
     const [username, setUsername] = useState("");
@@ -18,7 +13,7 @@ function LoginBox() {
     const login = (event) => {
         const loginCredentials = {username, password};
         event.preventDefault()
-        const results = fetch(databaseUrl + `/customer/login`, {
+        const results = fetch(process.env.REACT_APP_API_URL + `/customer/login`, {
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(loginCredentials)

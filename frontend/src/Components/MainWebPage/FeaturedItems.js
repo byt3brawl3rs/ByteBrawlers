@@ -7,17 +7,10 @@ function FeaturedItems(props) {
     const [cards, setCards] = useState([]);
     const [loading, setLoading] = useState(false);
     const [visibleSection, setVisibleSection] = useState(0);
-
-    const [databaseUrl, setDatabaseUrl] = useState("");
-
-    useEffect(() => {
-        setDatabaseUrl(window.REACT_APP_DATABASE_URL || 'default-value');
-    }, []);
-
     useEffect(() => {
         setLoading(true);
 
-        fetch(databaseUrl + "/items/featuredItems")
+        fetch(process.env.REACT_APP_API_URL + "/items/featuredItems")
             .then(response => response.json())
             .then(data => {
                 setCards(data);

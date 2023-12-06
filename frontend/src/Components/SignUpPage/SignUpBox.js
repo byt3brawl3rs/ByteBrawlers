@@ -3,11 +3,6 @@ import '../LoginPage/CSS/SignUpBox.css';
 import {Navigate, useNavigate} from "react-router-dom";
 
 function SignUpBox() {
-    const [databaseUrl, setDatabaseUrl] = useState("");
-
-    useEffect(() => {
-        setDatabaseUrl(window.REACT_APP_DATABASE_URL || 'default-value');
-    }, []);
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
@@ -19,7 +14,7 @@ function SignUpBox() {
     const signup = (event) => {
         event.preventDefault();
         const customerProfile = {firstName, lastName, email, username, password}
-        fetch(databaseUrl + "/customer", {
+        fetch(process.env.REACT_APP_API_URL + "/customer", {
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(customerProfile)

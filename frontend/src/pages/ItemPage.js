@@ -5,12 +5,6 @@ import "../Components/MainWebPage/CSS/ItemPage.css";
 import {useLocation, useNavigate} from "react-router-dom";
 
 function ItemPage() {
-    const [databaseUrl, setDatabaseUrl] = useState("");
-
-    useEffect(() => {
-        setDatabaseUrl(window.REACT_APP_DATABASE_URL || 'default-value');
-    }, []);
-
     const navigate = useNavigate();
     const {state} = useLocation();
     const {id} = state;
@@ -21,7 +15,7 @@ function ItemPage() {
     useEffect(() => {
         setLoading(true);
 
-        fetch(databaseUrl + `/items/${id}`)
+        fetch(process.env.REACT_APP_API_URL + `/items/${id}`)
             .then(response => response.json()
             ).then(data => {
             setItem(data)

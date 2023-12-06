@@ -3,12 +3,6 @@ import ItemCard from "../MainWebPage/ItemCard";
 import "./CSS/SearchResults.css"
 
 function SearchResults() {
-
-    const [databaseUrl, setDatabaseUrl] = useState("");
-
-    useEffect(() => {
-        setDatabaseUrl(window.REACT_APP_DATABASE_URL || 'default-value');
-    }, []);
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -17,9 +11,9 @@ function SearchResults() {
         const searchParameter = localStorage.getItem("searchParameter")
         let url = ""
         if (searchParameter === null || searchParameter === "") {
-            url = databaseUrl + `/items/search`
+            url = process.env.REACT_APP_API_URL + `/items/search`
         } else {
-            url = databaseUrl + `/items/search/${searchParameter}`
+            url = process.env.REACT_APP_API_URL + `/items/search/${searchParameter}`
         }
 
         fetch(url)
