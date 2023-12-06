@@ -11,6 +11,12 @@ import UserProfilePage from "./pages/UserProfilePage";
 import OrderPage from "./pages/OrderPage";
 
 export const PageRoutes = () => {
+    const port = process.env.PORT || 3000;
+
+    app.listen(port, () => {
+        console.log(`Server is running on port ${port}`);
+    });
+ 
     return (
         <BrowserRouter>
             <Routes>

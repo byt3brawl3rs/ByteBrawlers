@@ -1,1 +1,1 @@
-web: npm start
+web: java -Dserver.port=$PORT -jar backend/target/ByteBrawlers-0.0.1-SNAPSHOT.jar
