@@ -16,7 +16,7 @@
   },
   "scripts": {
     "install-frontend": "npm install --prefix frontend",
-    "start": "npm run install-frontend && concurrently \"npm start --prefix frontend\" \"cd backend && ./mvnw spring-boot:run\""
+    "start": "npm run install-frontend && concurrently \"npm start --prefix frontend\" \"backend/mvnw spring-boot:run\""
   },
   "eslintConfig": {
     "extends": [

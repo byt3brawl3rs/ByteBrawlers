@@ -19,8 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm install",
-    "dev": "concurrently \"npm start\" \"cd ../backend && ./mvnw spring-boot:run\""
+    "heroku-postbuild": "npm install"
   },
   "eslintConfig": {
     "extends": [
