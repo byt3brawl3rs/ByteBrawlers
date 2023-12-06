@@ -26,7 +26,5 @@ spring:
   web:
     resources:
       static-locations: file:/upload
-server:
-  port=${PORT:8080}:
 
 
