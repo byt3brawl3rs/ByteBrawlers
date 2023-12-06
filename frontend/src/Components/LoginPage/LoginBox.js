@@ -13,7 +13,7 @@ function LoginBox() {
     const login = (event) => {
         const loginCredentials = {username, password};
         event.preventDefault()
-        const results = fetch(process.env.REACT_APP_API_URL + `/customer/login`, {
+        const results = fetch(`postgres://onophtyiuzcmll:c610f7adb02a55dd7c35bf71fe1cf03c5c6c819b2303d104ae8113ba37c29505@ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm/customer/login`, {
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(loginCredentials)
@@ -21,7 +21,7 @@ function LoginBox() {
             .then((data) => {
                 console.log(data)
                 if (data.valid) {
-                    return fetch(`http://localhost:8080/customer/login/${username}`, {
+                    return fetch(`postgres://onophtyiuzcmll:c610f7adb02a55dd7c35bf71fe1cf03c5c6c819b2303d104ae8113ba37c29505@ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm/customer/login/${username}`, {
                         method: "POST",
                         headers: {"content-type": "application/json"},
                         body: JSON.stringify(username)
