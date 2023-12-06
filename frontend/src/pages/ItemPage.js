@@ -15,7 +15,7 @@ function ItemPage() {
     useEffect(() => {
         setLoading(true);
 
-        fetch(`postgres://onophtyiuzcmll:c610f7adb02a55dd7c35bf71fe1cf03c5c6c819b2303d104ae8113ba37c29505@ec2-3-228-117-228.compute-1.amazonaws.com:5432/d5fqelkp50lmhm/items/${id}`)
+        fetch(`http://localhost:8080/items/${id}`)
             .then(response => response.json()
             ).then(data => {
             setItem(data)
